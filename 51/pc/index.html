@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   
+    <script>
+        function check_browser() {
+            if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                window.location.href = "../h5/index.html";
+                return;
+            }
+            sessionStorage.removeItem('is_mobile');
+        }
+        check_browser();
+        window.addEventListener('resize',function(){
+            check_browser();
+        },false)
+    </script>
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="../common/js/config.js"></script>
+    <script src="../common/js/jquery.min.js"></script>
+    <title>五一活动</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+           <div class="head-inner banxin">
+                <div class="head-left">
+                    <a href="" class="logo_url" target="_blank">
+                        <img src="" alt="" class="logo_img">
+                    </a>
+                </div>
+                <div class="head-mid">
+                    <a href="" class="logo_url" target="_blank">
+                        <img class="slogan-img" src="" alt="">
+                    </a>
+                </div>
+                <div class="head-right">
+                    <div class="login-before">
+                        <div>
+                            <label for="username">账号：<input type="text" id="username"></label> <a class="login-in-btn">登录</a>
+                        </div>
+                        <div>
+                            <label for="password">密码：<input type="password" id="password"></label> <a href="" target="_blank" class="register_url">注册</a>
+                        </div>
+                        <a href="" class="forget_pass">忘记密码？</a>
+                    </div>
+                    <div class="login-after">
+                        <span>账户：<i class="after-login-username"></i></span>
+                        <button class="login-out-btn">退出登录</button>
+                    </div>
+                </div>
+           </div>
+        </div>
+        <div class="banner-wrap">
+            <div class="banner">
+                <div class="banner-mid"></div>
+                <div class="banner-left"></div>
+                <div class="banner-right"></div>
+            </div>
+            <div class="banner-cover"></div>
+        </div>
+        <div class="cont">
+            <h1></h1>
+            <h2></h2>
+            <ul class="cont-list">
+                <!-- <li class="cont-li active">
+                    <div class="cont-li-wrap">
+                        <div class="cont-li-light"></div>
+                        <div class="cont-li-bg"></div>
+                        <span class="cont-li-star cont-li-star-1"></span>
+                        <span class="cont-li-star cont-li-star-2"></span>
+                        <span class="cont-li-star cont-li-star-3"></span>
+                        <span class="cont-li-star cont-li-star-4"></span>
+                        <span class="cont-li-star cont-li-star-5"></span>
+                        <div class="cont-li-hui-left"></div>
+                        <div class="cont-li-hui-right"></div>
+                        <div class="cont-li-progress">
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                            <span class="active"></span>
+                        </div>
+                    </div>
+                </li>
+                <li class="cont-li"></li>
+                <li class="cont-li"></li>
+                <li class="cont-li"></li>
+                <li class="cont-li"></li>
+                <li class="cont-li"></li>
+                <li class="cont-li"></li>
+                <li class="cont-li"></li> -->
+            </ul>
+            <div class="ph-list">
+                <h1></h1>
+                <div class="ph-list-wrap">
+                    <div class="ph-list-inner">
+                        <ul class="ph-list-inner-ul">
+                            <li>
+                                <!-- <span>恭喜</span><span><i>aw***sii</i>同志</span><span>获得<i> 5星 </i>劳模证书</span><span>奖励劳模彩金<i>18888</i>元</span> -->
+                            </li>
+                           
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="rules">
+                <h1></h1>
+                <ul>
+                    <li> <i>1、</i> <p>本活动针对唯一官方游戏网站：<span class="copyRight_text"></span> （ <a class="this_site" target="_blank" style="font-weight:bold;color:#d93c2b;text-decoration: underline;"></a>）。</p></li>
+                    <li> <i>2、</i> <p>活动时间（美东时间）：2019/05/01 00:00:00 – 2019/05/07 23:59:59；每日单独计算当日累积充值，连续7天。</p></li>
+                    <li> <i>3、</i> <p>当日累计达到指定称号星级存款，次日即可领取对应称号星级彩金，一倍流水即可出款。</p></li>
+                    <li> <i>4、</i> <p><span style="font-weight: bold">超级劳模彩金</span>：会员在活动期间累积五个或五个以上称号；活动结束后可获得以下：
+                                    <b>1星累计5个及以上1星彩金X1.6倍；</b>
+                                    <b>2星累计5个及以上2星彩金X1.8倍；</b>
+                                    <b>3星累计5个及以上3星彩金X2倍；</b>
+                                    <b>4星累计5个及以上4星彩金X2.5倍；</b>
+                                    <b>5星累计5个及以上5星彩金X3倍。</b>
+                                    系统将依据会员所得称号中等级由高至低，取出称号等级前五个，再由第五名称号等级计算额外派发彩金；每位会员限只能领取一次；最后领取时间：2019/05/09 23:59:59 （美东时间）；三倍流水即可出款。
+                    </li>
+                    <li> <i>5、</i> <p>会员获得彩金后，如24小时未领取，将视为会员自动弃权。</p></li>
+                    <li> <i>6、</i> <p>若有任何问题请与客服联系，本次活动最终解释权归本公司所有。</p></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Copyright © <span class="copyRight_text">澳门金沙赌场 </span> Reserved</p>
+        </div>
+    </div>
+
+    <div class="fixed" id="fixed">
+        <a href="" class="online_custer" target="_blank">在线客服</a>
+        <a href="" class="logo_url" target="_blank">进入官网</a>
+        <a  class="go-top">
+            <span>返回顶部</span>
+            <i></i>
+        </a>
+    </div>
+    <!-- 普通未领取tan -->
+    <div class="ordinary">
+        <div class="ordinary-inner">
+            <i class="close-ordinary-inner"> × </i>
+            <h1>白领之光</h1>
+            <div class="ordinary-spans">
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+            </div>
+            <img src="./img/tan/pic-7.png" alt="" class="ordinary-img">
+            <h2><span class="tan-today">5月6日</span>累充： 0元</h2>
+            <ul class="ordinary-list">
+                <!-- <li>
+                    <span>1星</span>
+                    <span>当日累充1000</span>
+                    <span>奖励彩金<i>18元</i></span>
+                </li>
+                <li>
+                    <span>2星</span>
+                    <span>当日累充5000</span>
+                    <span>奖励彩金<i>58元</i></span>
+                </li>
+                <li>
+                    <span>3星</span>
+                    <span>当日累充10000</span>
+                    <span>奖励彩金<i>128元</i></span>
+                </li>
+                <li>
+                    <span>4星</span>
+                    <span>当日累充50000</span>
+                    <span>奖励彩金<i>588元</i></span>
+                </li>
+                <li>
+                    <span>5星</span>
+                    <span>当日累充100000</span>
+                    <span>奖励彩金<i>1088元</i></span>
+                </li> -->
+            </ul>
+
+            <div class="lingqu">立即领取</div>
+            <h3 class="countDownTime-wrap">
+                <i></i>
+                <span class="countDownTime">暂未达到领取条件</span>
+                <i></i>
+            </h3>
+        </div>
+    </div>
+    <!-- 普通已领取tan -->
+    <div class="ordEnd">
+        <div class="ordEnd-inner">
+            <i class="close-ordEnd-inner"> × </i>
+            <h1>三星白领之光</h1>
+            <div class="ordEnd-spans">
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span></span>
+            </div>
+            <img src="./img/tan/pic-7.png" alt="" class="ordEnd-inner-pic">
+            <h2><span class="account-name">111122233</span><span>同志：</span></h2>
+            <p>
+                工作勤恳努力，当日累充额度达到<span class="common-total-charge"></span>，被评为二0一九年度"<span class="account-level">X星白领之光</span>"荣誉称号，赠送 <span><i class="common-total-reward"></i>元</span>彩金。
+            </p>
+            <h3>特颁此证，以资鼓励！</h3>
+            <div class="ordEnd-footer">
+                <p>全国劳模委员会</p>
+                <p class="today"></p>
+            </div>
+            <img src="./img/tan/yinzhang.png" alt="" class="ordEnd-inner-yin">
+        </div>
+    </div>
+    <!-- 超级未领取 -->
+    <div class="special">
+        <div class="special-inner">
+            <i class="close-special-inner">×</i>
+            <h1>超级劳模</h1>
+            <div class="special-spans">
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+            </div>
+            <img src="./img/tan/pic-7.png" alt="" class="special-img">
+            <h2 style="height:40px;">
+                <!-- <span class="tan-today">5月6日</span>累充： 0元 -->
+            </h2>
+            <ul class="special-list">
+                <!-- <li>
+                    <span>1星</span>
+                    <span>奖励彩金<i>18元</i></span>
+                </li>
+                <li>
+                    <span>2星</span>
+                    <span>奖励彩金<i>58元</i></span>
+                </li>
+                <li>
+                    <span>3星</span>
+                    <span>奖励彩金<i>128元</i></span>
+                </li>
+                <li>
+                    <span>4星</span>
+                    <span>奖励彩金<i>588元</i></span>
+                </li>
+                <li>
+                    <span>5星</span>
+                    <span>奖励彩金<i>1088元</i></span>
+                </li> -->
+            </ul>
+
+            <div class="special-lingqu">立即领取</div>
+            <h3 class="special-countDownTime-wrap">
+                <i></i>
+                <span class="special-countDownTime">暂未达到领取条件</span>
+                <i></i>
+            </h3>
+        </div>
+    </div>
+    <!-- 超级已领取 -->
+    <div class="speEnd">
+        <div class="speEnd-inner">
+            <i class="close-speEnd-inner"> × </i>
+            <h1>荣誉证书</h1>
+            <div class="speEnd-spans">
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span class="active"></span>
+                <span></span>
+            </div>
+            <img src="./img/tan/pic-7.png" alt="" class="speEnd-inner-pic">
+            <h2><span class="account-name">111122233</span><span>同志：</span></h2>
+            <p>
+                工作勤恳努力，五一劳模竞赛活动期间累充额度达到<i class="special-total-charge"></i>，被评为二0一九年度"<span class="speEnd-account-level">X星超级劳模</span>"荣誉称号，赠送 <span class="speEnd-account-money"><i>10000</i>元</span>彩金。
+            </p>
+            <h3>特颁此证，以资鼓励！</h3>
+            <div class="ordEnd-footer">
+                <p>全国劳模委员会</p>
+                <p class="today"></p>
+            </div>
+            <img src="./img/tan/yinzhang.png" alt="" class="speEnd-inner-yin">
+        </div>
+    </div>
+    <!-- <div class="loading-wrap">
+        <img src="../common/img/loading-1.gif" alt="">
+    </div> -->
+    <!-- <script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+    <script>
+        L2Dwidget.init({
+            "model": {
+                // jsonPath: "https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json",
+                // jsonPath: "https://unpkg.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json",
+                jsonPath: "https://unpkg.com/live2d-widget-model-koharu@1.0.5/assets/koharu.model.json",
+                // jsonPath: "https://unpkg.com/live2d-widget-model-tororo@1.0.5/assets/tororo.model.json",
+                // jsonPath: "https://unpkg.com/live2d-widget-model-hijiki@1.0.5/assets/hijiki.model.json",
+                "scale": 1
+            },
+            "display": {
+                "position": "right",
+                "width": 75,
+                "height": 150,
+                "hOffset": 0,
+                "vOffset": -50
+            },
+            "mobile": {
+                "show": true,
+                "scale": 0.5
+            },
+            "react": {
+                "opacityDefault": 0.7,
+                "opacityOnHover": 0.2
+            }
+        });
+    </script> -->
+    <script src="../common/js/init.js"></script>
+    <script src="../common/js/api.js"></script>
+    <script src="../common/js/Func.js"></script>
+    <script src="../common/js/index.js"></script>
+</body>
+</html>
