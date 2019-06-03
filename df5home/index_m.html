@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/base.css">
+    <link rel="stylesheet" href="./css/m_index.css">
+    <link rel="shortcut icon" href="https://www.df5ii.com/assets/img/favicon.ico">
+    <script src="./js/api_url.js"></script>
+    <script type="text/javascript" src="./js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.SuperSlide.2.1.1.js"></script>
+    <script type="text/javascript" src="./js/layer.js"></script>
+    <script type="text/javascript" src="js/jquery.rotate.min.js"></script>
+    <script type="text/javascript" src="./js/lottery.js"></script>
+    <script type="text/javascript" src="./js/time.js"></script>
+    <script type="text/javascript" src="./js/pagination.min.js"></script>
+    <title>幸运大转盘</title>
+    <script>
+        var flag = /Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)
+        if (!flag) {
+            window.location.href = './index.html';
+        }
+
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (clientWidth > 750) {
+                        docEl.style.fontSize = 100 + 'px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="login-before-box" onclick="LostBox.open('.login-wrap', '.login-inner')">会员登录</div>
+        <div class="login-fater-box" onclick="LostBox.open('.info-wrap', '.info-inner')"></div>
+    </header>
+    <div class="body-cont">
+        <div class="top-nav">
+            <ul>
+                <li>
+                    <a href="https://www.df5ii.com/">官方首页</a>
+                </li>
+                <li>
+                    <a href="https://www.df5ii.com/promo#">优惠活动</a>
+                </li>
+                <li>
+                    <a href="https://www.df5ii.com//signup">免费注册</a>
+                </li>
+                <li>
+                    <a target="_blank" href="javascript:window.open('https://app.comm100.chat/chatserver/chatWindow.aspx?siteId=5000016&planId=21#','LIVECHAT','height=600,width=800')">在线客服</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="bet-box">
+            <div class="bet-circle">
+                <img src="./img/goods.png" alt="">
+                <img src="./img/goods.png" alt="">
+                <img src="./img/goods.png" alt="">
+                <img src="./img/goods.png" alt="">
+                <img src="./img/goods.png" alt="">
+                <img src="./img/goods.png" alt="">
+                <img src="./img/goods.png" alt="">
+                <img src="./img/goods.png" alt="">
+                <img src="./img/goods.png" alt="">
+                <img src="./img/goods.png" alt="">
+            </div>
+            <div class="bet-btn"></div>
+        </div>
+
+        <div class="banner-left">
+            <div class="left-line"></div>
+            <div class="left-cont">
+                <h3>中奖名单</h3>
+                <div class="banner-table" style="position: relative;">
+                    <ul class="table-move">
+                        <li>
+                            <span>1111</span>
+                            <span>获得现金筹码222元</span>
+                        </li>
+                    </ul>
+                    <div style="position:absolute;width:100%;height:100%;left:0;top:0;"></div>
+                </div>
+
+                <div class="banner-footer">
+                    <div class="yuanqiu-box"></div>
+                    <div class="banner-button-box">
+                        <button type="button" class="search-btn" onclick="queryBonus();">中奖查询</button>
+                        <button type="button" class="reg-btn" onclick="window.open('https://www.df5ii.com//signup')">免费注册</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="prizelist">
+            <span class="show-more" onclick="showMore(this.innerText,this)">更多>></span>
+            <div class="prizelist-list">
+                <ul class="clear-fix prizelist-list-ul">
+                    <li>
+                        <img src="./img/p1.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/p2.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/p3.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/p4.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/p5.png" alt="">
+                    </li>
+                    <li>
+                        <img src="./img/p6.png" alt="">
+                    </li>
+                    <li class="need-toggle-li">
+                        <img src="./img/p7.png" alt="">
+                    </li>
+                    <li class="need-toggle-li">
+                        <img src="./img/p8.png" alt="">
+                    </li>
+                    <li class="need-toggle-li">
+                        <img src="./img/p9.png" alt="">
+                    </li>
+                    <li class="need-toggle-li">
+                        <img src="./img/p10.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-cont">
+            <div class="main-cont-one">
+                <h3>活动规则</h3>
+                <div class="main-cont-item">
+                    <p>1、活动统计时间为：美东时间当日00:00:00至美东时间当日23:59:59；</p>
+                    <p>2、会员当日达到抽奖条件后，即可在次日美东时间，活动时段1：01:00-07:00 (北京时间13:00~19:00） 活动时段2：08:00-11:00 (北京时间20:00~23:00）期间开始抽奖，且需在当天完成抽奖，否则视为自动放弃活动资格；</p>
+                    <p>3、除现金筹码以外奖品，从中奖之日起，当天内未进行申请，将视为自动放弃中奖资格；</p>
+                    <p>4、每位会员每个IP地址当日累计抽奖次数最多为1次，如发现会员同一个IP下注册多个账号进行投注抽奖，dafabet大发有权拒绝赠送其彩金并冻结此相关账号，以保证正常会员玩家的利益；</p>
+                    <p>5、此转盘活动为【dafabet大发】系统程序自动运行，获奖的概率完全遵循力学及自然概率，不涉及任何人工操作，抽奖结果以系统判定为准，不得争议。</p>
+                </div>
+            </div>
+
+            <div class="main-cont-one main-cont-two">
+                <h3>奖品派发</h3>
+                <div class="main-cont-item">
+                    <p>1、 获得iPhoneX 定制版（256G）的会员，请获奖后第一时间联系官网24小时在线客服，并提供个人相关信息，为确保奖品准确无误赠送给中奖者，在线客服会进行相关信息的核对，届时请获奖人员配合，否则dafabet大发有权拒绝赠予该奖品；</p>
+                    <p>2、实物奖品可以折现，折现的会员可联系24小时在线客服进行申请，1倍流水即可申请提款；</p>
+                    <p>3、获得"存送优惠卷"的会员，需（本金+彩金）的3倍流水即可申请提款；</p>
+                    <p>4、获得"现金筹码"的会员无需申请，系统将在活动时段结束后自动添加到中奖会员游戏账号内，1倍流水即可申请提款。</p>
+                </div>
+            </div>
+
+            <div class="main-cont-one main-cont-three">
+                <h3>注意事项</h3>
+                <div class="main-cont-item">
+                    <p>1、 获得iPhoneX 定制版（256G）的会员，请获奖后第一时间联系官网24小时在线客服，并提供个人相关信息，为确保奖品准确无误赠送给中奖者，在线客服会进行相关信息的核对，届时请获奖人员配合，否则dafabet大发有权拒绝赠予该奖品；</p>
+                    <p>2、实物奖品可以折现，折现的会员可联系24小时在线客服进行申请，1倍流水即可申请提款；</p>
+                    <p>3、获得"存送优惠卷"的会员，需（本金+彩金）的3倍流水即可申请提款；</p>
+                    <p>4、获得"现金筹码"的会员无需申请，系统将在活动时段结束后自动添加到中奖会员游戏账号内，1倍流水即可申请提款。</p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- 弹窗系列 -->
+        <div class="login-wrap">
+            <div class="login-inner">
+                <i class="close-login-box" onclick="LostBox.close('.login-wrap','.login-inner')">×</i>
+                <div class="login-top">
+                    <div>
+                        <input type="text" placeholder="输入平台账号" class="username">
+                    </div>
+
+                    <div>
+                        <input type="password" placeholder="输入密码" class="password">
+                    </div>
+                </div>
+                <div class="login-bottom">
+                    <button class="login-btn" onclick="loginSite()">登录</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="loading-wrap">
+            <div class="loading-inenr">
+                <img src="./img/loading.gif" alt="">
+            </div>
+        </div>
+
+        <div class="search-wrap">
+            <div class="search-inner">
+                <h3>中奖纪录
+                    <i class="close-search-box" onclick="LostBox.close('.search-wrap', '.search-inner')">×</i>
+                </h3>
+                <div class="search-box">
+
+                    <table class="search-table-1">
+                            <thead>
+                                <tr>
+                                    <th>中奖时间</th>
+                                    <th>奖品名称</th>
+                                    <th>是否派彩</th>
+                                </tr>
+                            </thead>
+                    </table>
+                    <div class="search-box-inner">
+                        <table class="search-table-2">
+                                <tbody>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                    <tr>
+                                        <td>bl9999</td>
+                                        <td>速度快放假束带结发</td>
+                                        <td>未派发</td>
+                                    </tr>
+                                </tbody>
+                        </table>
+                    </div>
+                    <div class="fenye-box"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tcwin-wrap">
+                <div class="tcwin">
+                    <img src="/img/tcwin.png" alt="">
+
+                    <div class="tcwin-inner">
+                        <i class="close-tcwin-inner">×</i>
+                        <p>恭 喜 中 奖</p>
+                        <div class="tcwin-inner-img-box">
+                            <img src="./img/p1.png" alt="">
+                        </div>
+                        <!-- <h4>获得<span style="color:yellow">366元</span>现金筹码</h4> -->
+                    </div>
+                </div>
+            <!-- <div class="tcwin-inner">
+                <i class="close-tcwin-wrap" onclick="LostBox.close('.tcwin-wrap','.tcwin-inner')">×</i>
+                
+            </div> -->
+        </div>
+
+        <div class="tclost-wrap">
+            <div class="tclost">
+                <i class="close-tclost-wrap" onclick="LostBox.close('.tclost-wrap', '.tclost')">×</i>
+                <div class="tclost-img-box"></div>
+                <p>谢谢参与</p>
+            </div>
+        </div>
+
+        <div class="info-wrap">
+            <div class="info-inner">
+                <i class="close-info-wrap" onclick="LostBox.close('.info-wrap', '.info-inner')">×</i>
+                <h3>个人中心</h3>
+                <div>
+                    <span>会员账号：</span>
+                    <i class="show-username"></i>
+                </div>
+                <div>
+                    <span>抽奖次数：</span>
+                    <i class="show-username-count"></i>
+                </div>
+                <div>
+                    <button class="show-history" onclick="$('.info-wrap').hide();LostBox.open('.search-wrap', '.search-inner')">历史记录</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="time-wrap">
+            <div class="time-inner">
+                <i class="close-time-wrap" onclick="LostBox.close('.time-wrap', '.time-inner')">×</i>
+                <div class="time-box">
+                    <h2>bet
+                        <span>365</span>
+                    </h2>
+                    <h3>距离开奖</h3>
+                    <ul class="countdown">
+                        <li>
+                            <span class="hours">00</span>
+                        </li>
+                        <li class="seperator">:</li>
+                        <li>
+                            <span class="minutes">00</span>
+                        </li>
+                        <li class="seperator">:</li>
+                        <li>
+                            <span class="seconds">00</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var isture = 1;
+        var $btn = $('.bet-btn');
+        var $turntable = $('.bet-circle');
+
+        function rotateFunc(obj, fn) {
+            if (!isture) {
+                return;
+            }
+            this.isture = false;
+            var that = this;
+            $turntable.stopRotate();
+            $turntable.rotate({
+                angle: 0,
+                duration: 4000,
+                animateTo: obj.angle + 1440,
+                callback: function () {
+                    fn && fn(obj);
+                    isture = 1;
+                }
+            });
+        };
+
+        $(function () {
+             // 初始化轮盘图片
+             $.ajax({
+                url:  api_obj.api_url + api_obj.init_get_game_info,
+                type: 'post',
+                data: {},
+                dataType: 'json',
+                success: function(data){
+                    if(data.code == 0){
+                        var arr = data.data;
+                        sessionStorage.setItem('arr_img',JSON.stringify(arr));
+                        var str = '' , ul_str = '';
+                        for(let i = 0; i < arr.length; i++){
+                            str += '<img src="'+arr[i].disc_img+'" />';
+                            if(i >=5 ){
+                                ul_str += '<li class="need-toggle-li"><img src="'+arr[i].scroll_img +'" alt=""></li>'
+                            }else{
+                                ul_str += '<li><img src="'+arr[i].scroll_img +'"></li>';
+                            }
+                        }
+                        $('.bet-circle').html(str);
+                            // 初始化轮盘商品的角度
+                            var width = $('.bet-circle>img').eq(0).width();
+                            var $_imgs  = $('.bet-circle>img');
+                            for(var i =0; i < $_imgs.length; i++){
+                                $_imgs[i].style.transform = 'rotateZ('+i * 36+'deg)';
+                            }
+                            $('.prizelist-list-ul').html(ul_str);
+                    }else{
+                        alert(data.msg);
+                    }
+                },
+                error:function(err){
+                    if(err && err.msg){
+                        alert (err.msg)
+                    }
+                }
+            })
+
+           
+
+            m_loginState();
+
+            $.ajax({
+                url: api_obj.api_url + api_obj.init_interval,
+                type: 'post',
+                data: {},
+                dataType: 'json',
+                success: function (data) {
+                    showTimeBox(data.data.interval);
+                },
+                error: function (err) {
+                    if (err && err.msg) {
+                        alert(err.msg)
+                    }
+                }
+            })
+
+
+
+            // 获取轮播历史数据
+            $.ajax({
+                url: api_obj.api_url + api_obj.init_log,
+                type: 'post',
+                data: {
+                    _token: api_obj.get_token
+                },
+                dataType: 'json',
+                success: function (data) {
+                    var list = data.data.log;
+                    var str = ''
+                    list.forEach(function (ele, i) {
+                        str += '<li> <span>' + ele.account + '</span>  <span>' + '获得' +ele.name +
+                            '</span> </li>'
+                    })
+                    $('.table-move').html(str);
+
+                    jQuery(".banner-table").slide({
+                        mainCell: ".table-move",
+                        autoPlay: true,
+                        effect: "topMarquee",
+                        vis: 9,
+                        interTime: 50,
+                        trigger: "click"
+                    });
+
+                },
+                error: function (err) {
+                    if (err && err.msg) {
+                        alert(err.msg)
+                    }
+                }
+            })
+
+
+
+
+            // 点击历史记录
+            $('.search-btn').on('click', function () {
+                var username = sessionStorage.getItem('username');
+                var _token = sessionStorage.getItem('_token');
+                if (!username) {
+                    layer.msg('请先登录！', {
+                        icon: 5,
+                        time: 1800
+                    });
+                    return;
+                }
+                return;
+                $.ajax({
+                    url: 'index.php',
+                    type: 'post',
+                    data: {
+                        account: username,
+                        _token: _token,
+                        action: 'history'
+                    },
+                    dataType: 'json',
+                    success: function (data) {
+                        $str = '';
+                        $.each(data.data, function (i, o) {
+                            if (o.status == 1) {
+                                $str += '<tr style="color:#FFF"><td>' + o.name +
+                                    '</td><td>' +
+                                    o.addtime + '</td><td>已派发</td></tr>';
+                            } else {
+                                $str += '<tr style="color:#fbfb00"><td>' + o.name +
+                                    '</td><td>' +
+                                    o.addtime + '</td><td>未派发</td></tr>';
+                            }
+                        })
+                        $("#history_list").append($str);
+                    }
+                })
+            })
+
+
+
+             $('.close-tcwin-inner').on('click',function(){
+                $('.tcwin-wrap').fadeOut();
+            });
+
+            setTimeout(function(){
+                sessionStorage.clear();
+                loginState();
+            },60*100*1000);
+
+           
+
+             // 开始抽奖
+             $('.bet-btn').on('click', function () {
+                checklogin();
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+img,
+form,
+input,
+textarea,
+select {
+  padding: 0;
+  margin: 0;
+}
+body{
+    /* font-family: "MicroSoft Yahei" */
+    font-family: "Microsoft YaHei", "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+}
+
+ul,li,ol{
+    list-style: none;
+}
+button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+table{
+    border-collapse:collapse;
+}
+.clear-fix::after{
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+input{
+    outline: none;
+    appearance: none;
+}
+a{
+    text-decoration-line: none;
+    text-decoration: none;
+}
+.banxin{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+table{
+    border-collapse: collapse;
+}
+input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{  /* chrome */
+
+    -webkit-appearance: none!important;  
+    margin: 0;  
+}
+input[type="number"]{
+-moz-appearance:textfield; /*Firefox*/
+}

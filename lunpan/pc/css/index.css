@@ -1,0 +1,499 @@
+.container{
+   background: url('../images/bg.jpg') no-repeat center / cover; 
+   padding-bottom: 30px;
+   position: relative;
+}
+.header{
+    width: 100%;
+    height: 118px;
+    background: url('../images/top-bg.png') no-repeat center;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+}
+.header-inner>div>a:hover{
+    color: #fff;
+}
+.header-inner>div>a{
+    color: #f7d54d;
+    font-size: 18px;
+}
+
+.header-inner>div{
+    float: left;
+}
+.header-inner-text{
+    margin-top: 20px;
+}
+.header-inner-text>a+a{
+    margin-left: 30px;
+}
+.main{
+    padding-top: 240px;
+    padding-bottom: 700px;
+    position: relative;
+}
+.login-box{
+    position: absolute;
+    right: 100px;
+    top: 230px;
+    z-index: 90;
+}
+.login-box>a{
+    display: inline-block;
+    width: 171px;
+    height: 82px;
+}
+.login-box>a+a{
+    margin-left: 20px;
+}
+.login-btn{
+    background: url('../images/dl.png') no-repeat center;
+}
+.reg-btn{
+    background: url('../images/zc.png') no-repeat center;
+}
+.login-btn:hover{
+    background: url('../images/dl-hover.png') no-repeat 0 1px;
+}
+.reg-btn:hover{
+    background: url('../images/zc-hover.png') no-repeat center;
+}
+.lottle{
+    position: absolute;
+    top: 240px;
+    left: 0;
+}
+.lottle-title{
+    width: 726px;
+    height: 174px;
+    background: url('../images/wz.png') no-repeat center ;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lottle-cont{
+    width: 611px;
+    height: 662px;
+    background: url('../images/lp-bg.png') no-repeat center;
+    position: absolute;
+    top: 80px;
+    left: -70px;
+    z-index: 80;
+}
+.lottle-cont-inner{
+    width: 544px;
+    height: 544px;
+    background: url('../images/lp-jp.png') no-repeat center;
+    position: absolute;
+    left: 50%;
+    top: 40px;
+    margin-left: -272px;
+}
+.lottle-cont-btn-wrap{
+    width: 167px;
+    height: 352px;
+    /* background: url('../images/zhizhen.png') no-repeat center; */
+    position: absolute;
+    left: 50%;
+    margin-left: -84px;
+    top: 40px;
+}
+.lottle-cont-btn{
+    width: 168px;
+    height: 208px;
+    border-radius: 50%;
+    /* background: pink; */
+    position: absolute;
+    cursor: pointer;
+    bottom: 0;
+    left: 0;
+    background: url('../images/zz.png') no-repeat center;
+}
+.lottle-cont-light{
+    width: 169px;
+    height: 272px;
+    position: absolute;
+    background: url('../images/guang.png') no-repeat center;
+    display: none;
+}
+.lottle-his{
+    width: 550px;
+    height: 500px;
+    position: absolute;
+    left: 440px;
+    top: 140px;
+    background: url('../images/history_03.png') no-repeat center;
+}
+.lottle-his>h3{
+    color: #7960c6;
+    font-size: 35px;
+    margin-top: 75px;
+    text-align: center;
+    text-indent: -20px;
+}
+.lottle-his-wrap{
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    overflow: hidden;
+    /* background: #000; */
+    left: 140px;
+    top: 140px;
+}
+.lottle-his-wrap ul li{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    cursor: default;
+}
+
+.lottle-his-wrap ul  li span{
+    text-align: center;
+    font-size: 15.8px;
+    color: #5c479f;
+    line-height: 31px;
+}
+.lottle-his-wrap ul  li span{
+    margin-left: 30px;
+}
+.lottle-his-wrap ul  li span i{
+    font-style: normal;
+}
+.content{
+    margin-top: 50px;
+}
+.content-item>h3{
+    width: 277px;
+    height: 75px;
+    text-align: center;
+    line-height: 75px;
+    font-weight: bold;
+    font-size: 30px;
+    color: #fae65d;
+    margin: 0 auto;
+    background: url('../images/1.png') no-repeat center;
+    letter-spacing: 2px;
+}
+.content-item, .content-item>ul{
+    margin-top: 20px;
+}
+.content-item>ul li{
+    color: #fae65d;
+    font-size: 17px;
+    line-height: 32px;
+}
+/* .lottle-cont-inner.active{
+    animation: around 10s ease infinite;
+}
+@keyframes around{
+    0%{
+        transform : rotateZ(0deg)
+    }
+    100%{
+        transform : rotateZ(360deg)
+    }
+} */
+
+.popup-have{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0 , 0 ,0 ,.7);
+    z-index: 101;
+    display: none;
+}
+.popup-have-inner{
+    position: absolute;
+    left: 50%;
+    margin-left: -155px;
+    width: 310px;
+    /* height: 330px; */
+    top: 50%;
+    margin-top: -165px;
+    /* background: url('../images/tc-jp.png') no-repeat center / cover; */
+    background: #645aea;
+    border-radius: 10px;
+    box-shadow: rgba(255,255,255,0.7) 0 0 60px inset;
+    padding: 30px 0;
+}
+.popup-have-img-box{
+    /* padding: 30px 0 20px 0 ; */
+}
+.popup-have-img-box>img{
+    display: block;
+    margin: 0 auto;
+    width: 120px;
+}
+.popup-have-inner>h4{
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: #fefb00;
+    text-align: center;
+}
+.popup-have-inner>p{
+    color: #fff;
+    font-size: 28px;
+    text-align: center;
+}
+.popup-have-inner>p span{
+    color: #fafc05;
+    font-weight: bold;
+}
+.popup-have-inner>p span i{
+    font-style: normal;
+}
+.close-popup-have , .close-login-wrap, .close-search-wrap{
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    font-style: normal;
+    font-size: 18px;
+    user-select: none;
+    cursor: pointer;
+}
+.close-login-wrap, .close-search-wrap{
+    top: 0px;
+}
+.login-wrap, .search-wrap, .loading-wrap{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.75);
+    z-index: 101;
+    display: none;
+}
+.login-inner{
+    width: 364px;
+    height: 294px;
+    background: url('../images/dl-bg.png') no-repeat center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -182px;
+    margin-top: -147px;
+
+}
+.login-inner>div>label{
+    color: #fbf168;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    width: 74%;
+    text-align: center;
+}
+.login-inner>div>label input{
+    width: 190px;
+    height: 40px;
+    border-radius: 5px;
+    background: #3c2f99;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 3px rgba(255,255,255,.9);
+    padding-left: 5px;
+    color: #fff;
+    font-size: 16px;
+}
+.login-inner>div>label input::-webkit-input-placeholder{
+    font-size: 14px;
+}
+.login-inner-item{
+    margin-top: 100px;
+}
+
+.login-inner>div+div{
+    margin-top: 10px;
+}
+.sure-login-btn{
+    display: block;
+    margin: 15px auto;
+    background: none;
+    user-select: none;
+}
+.search-inner{
+    position: absolute;
+    width: 604px;
+    height: 430px;
+    background: url('../images/tc-zjcx.png') no-repeat center;
+    left: 50%;
+    top: 50%;
+    margin-left: -302px;
+    margin-top: -215px;
+}
+.search-inner-title{
+    height: 80px;
+    line-height: 80px;
+    width: 82%;
+    margin: 0 auto;
+    margin-top: 80px;
+    text-align: center;
+}
+.search-inner-title>label{
+    color: #fbf168;
+    font-size: 18px;
+    font-weight: 600;
+}
+.search-inner-title input{
+    height: 36px;
+    width: 280px;
+    background: #3c2f99;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 3px rgba(255,255,255,.9);
+    padding-left: 5px;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+}
+.search-inner-title input::-webkit-input-placeholder{
+    font-size: 14px;
+}
+.sure-search-btn{
+    background: none;;
+    vertical-align: middle;
+    margin-top: 8px;
+}
+.search-inner-content{
+    width: 82%;
+    height: 220px;
+    overflow-y: scroll;
+    margin: 0 auto;
+}
+.search-inner-content table{
+    background: #3c2f99;;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #483ba5;
+}
+.search-inner-content table thead th{
+    height: 45px;
+    color: #fff;
+    font-size: 16.5px;
+}
+.search-inner-content table tbody tr{
+    height: 35px;
+    font-size: 14px;
+}
+.search-inner-content table, .search-inner-content table tbody{
+    width: 100%;
+}
+.search-inner-content table td , .search-inner-content table th{
+    text-align: center;
+    border: 1px solid #483ba5;
+}
+.search-inner-content table td {
+    color: #fbf168;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+.search-inner-content::-webkit-scrollbar
+{
+    width: 3px;
+    height: 100%;
+    background-color: #fff;
+}
+ 
+/*定义滚动条轨道 内阴影+圆角*/
+/* .search-inner-content::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+  */
+/*定义滑块 内阴影+圆角*/
+.search-inner-content::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+.login-after{
+    min-width: 500px;
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+    background: #3c2f99;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.8) inset;
+    border-radius: 30px;
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    margin-left: -295px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    display: none;
+}
+.login-after label{
+    margin-right: 15px;
+}
+.login-after label , .login-after button{
+    color: #f7e68c;
+    font-size: 16px;
+    font-weight: bold;
+}
+.login-after button{
+    background: none;
+}
+.loading-wrap{
+}
+.loading-inner{
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -40px;
+    margin-top: -80px;
+}
+.loading-inner>img{
+    width: 100%;
+    height: 100%;
+}
+.toast-wrap {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 10001;
+    background: rgba(0,0,0,.5);
+    display: none;
+}
+.toast-inner {
+    width: 400px;
+    height: 100px;
+    position: absolute;
+    background: #645aea;
+    box-shadow: 0px 0px -10px rgba(0,0,0,.6);
+    border-radius: 15px;
+    left: 50%;
+    margin-left: -200px;
+    top: -300px;
+    transition: all .3s;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    color: #fff;
+    z-index: 10001;
+    box-shadow: 0 0 40px rgba(255,255,255,0.8) inset;
+}
+.toast-inner.active {
+    top: 20%;
+}
+.toast-inner>p {
+    text-align: center;
+    margin-top: 13px;
+    font-size: 18px;
+}

@@ -1,0 +1,634 @@
+header {
+    height: 1rem;
+    background: #082352;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0.25rem;
+    box-sizing: border-box;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.container {
+    padding-top: 1rem;
+    background: #eeeeee;
+}
+
+.head-left a {
+    display: block;
+    width: 1.9rem;
+    height: 0.65rem;
+    background: url('../images/logo.png') no-repeat center / cover;
+}
+
+.head-right {
+    width: 0.6rem;
+    height: 0.4rem;
+    background: url('../images/top-right-icon.png') no-repeat center / cover;
+    transition: all .15s;
+}
+
+.head-right.active {
+    width: 0.48rem;
+    height: 0.48rem;
+    background: url('../images/top-right-icon-close.png') no-repeat center / cover;
+}
+
+.banner {
+    width: 100%;
+    height: 4.57rem;
+    background: url('../images/banner.png') no-repeat center / cover;
+}
+
+.banner>ul {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+@keyframes shanshan {
+    0% {
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(0.85, 0.85);
+        opacity: 0.2;
+    }
+    100% {
+        transform: scale(1.15, 1.15);
+        opacity: 1;
+    }
+}
+
+.banner>ul li {
+    position: absolute;
+}
+
+.banner>ul li:nth-child(1) {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url('../images/star-1.png') no-repeat center / cover;
+    animation: shanshan 3s linear infinite;
+    left: 1.56rem;
+    top: 0.08rem;
+}
+
+.banner>ul li:nth-child(2) {
+    width: 0.48rem;
+    height: 0.48rem;
+    background: url('../images/star-1.png') no-repeat center / cover;
+    animation: shanshan 3s linear infinite;
+    left: 0.3rem;
+    bottom: 1.45rem;
+}
+
+.banner>ul li:nth-child(3) {
+    width: 0.24rem;
+    height: 0.24rem;
+    background: url('../images/star-1.png') no-repeat center / cover;
+    animation: shanshan 3s linear infinite;
+    left: 4.4rem;
+    top: 0.6rem;
+}
+
+.banner>ul li:nth-child(4) {
+    width: 0.28rem;
+    height: 0.28rem;
+    background: url('../images/star-1.png') no-repeat center / cover;
+    animation: shanshan 3s linear infinite;
+    left: 3.05rem;
+    bottom: 0.9rem;
+}
+
+.banner>ul li:nth-child(5) {
+    width: 0.56rem;
+    height: 0.56rem;
+    background: url('../images/star-1.png') no-repeat center / cover;
+    animation: shanshan 3s linear infinite;
+    top: 0.28rem;
+    right: 0.35rem;
+}
+
+canvas {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+}
+
+/* 下面公共部分 */
+
+.concat_us_inner {
+    height: 16rem;
+    background: url('../images/concat_bg.jpg') no-repeat 0 0 / cover;
+}
+
+.concat_us_title>h2 {
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 0.44rem;
+    padding-bottom: 0.1rem;
+}
+
+.concat_us_title>h3 {
+    color: #fff;
+    font-size: 0.3rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.concat_us_title>h4 {
+    font-size: 0.3rem;
+    color: #00f6ff;
+    text-align: center;
+    font-weight: normal;
+    margin-top: 0.15rem;
+}
+
+.concat-bot {
+    margin-top: 0.47rem;
+}
+
+.concat-bot-left {
+    width: 6.95rem;
+    height: 5.5rem;
+    border: 1px solid #00ffff;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0.25rem;
+    box-sizing: border-box;
+}
+
+.concat-input-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.concat-input-box>input {
+    width: 3.08rem;
+    height: 0.54rem;
+    border: none;
+    background: #0c2c79;
+    padding-left: 0.12rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.concat-input-box>input::-webkit-input-placeholder {
+    color: #326eff;
+    font-size: 0.25rem;
+}
+
+.concat-bot-left textarea {
+    width: 6.32rem;
+    height: 3.2rem;
+    background: #0c2c79;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 0.2rem;
+    box-sizing: border-box;
+    color: #fff;
+    margin-top: 0.2rem;
+}
+
+.concat-bot-left textarea::-webkit-input-placeholder {
+    color: #326eff;
+    font-size: 0.265rem;
+}
+
+.foot-btn-box {
+    height: 0.7rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-btn-box>div {
+    /* width: 3rem; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.foot-btn-box-left {
+    position: relative;
+}
+
+.foot-btn-box-left>button {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #fff;
+    border-radius: 5px;
+    font-size: 0.33rem;
+    font-weight: bold;
+}
+
+.foot-btn-box-left>input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.foot-btn-box-right>.submit {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.33rem;
+    font-weight: bold;
+}
+
+.concat-bot-right {
+    padding-left: 0.55rem;
+    padding-top: 0.25rem;
+    box-sizing: border-box;
+}
+
+.concat-bot-right>h3 {
+    font-size: 0.35rem;
+    font-weight: bold;
+    color: #fff;
+    letter-spacing: 0.02rem;
+}
+
+.concat-bot-right>h3>span {
+    font-weight: normal;
+    font-size: 0.28rem;
+}
+
+.concat-bot-right ul li {
+    font-size: 0.28rem;
+    color: #e0e1e5;
+    position: relative;
+    vertical-align: middle;
+    padding-left: 0.6rem;
+    box-sizing: border-box;
+    margin-top: 0.3rem;
+}
+
+.concat-bot-right ul li+li {}
+
+.concat-bot-right ul li::before {
+    content: "";
+    position: absolute;
+    width: 0.5rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    left: 0;
+    top: -0.03rem;
+}
+
+.concat-bot-right ul li:nth-child(1)::before {
+    background: url('../images/skype.png') no-repeat center /100%;
+}
+
+.concat-bot-right ul li:nth-child(2)::before {
+    background: url('../images/qq.png') no-repeat center /100%;
+}
+
+.concat-bot-right ul li:nth-child(3)::before {
+    background: url('../images/telegram.png') no-repeat center /100%;
+}
+
+.concat-bot-right ul li:nth-child(4)::before {
+    background: url('../images/email.png') no-repeat center /100%;
+}
+
+.wechat-box {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 0.35rem;
+    padding: 0.1rem 0.3rem;
+    box-sizing: border-box;
+}
+
+.wechat-box>div>p {
+    font-size: 0.28rem;
+    color: #00deff;
+    margin-top: 0.07rem;
+}
+
+.wechat-box>div>div {
+    width: 2rem;
+    height: 2rem;
+    background: url('../images/wechat_border.png') no-repeat center / cover;
+    padding: 0.06rem;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.wechat-box>div>div>img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+}
+
+footer {
+    height: 0.7rem;
+    line-height: 0.7rem;
+    background: #011a45;
+    font-size: 0.26rem;
+    color: #fff;
+    text-align: center;
+}
+
+.mobile-nav {
+    position: fixed;
+    left: 0;
+    top: 1rem;
+    right: 0;
+    bottom: 0;
+    background: rgba(8, 33, 82, 0.9);
+    z-index: 101;
+    /* display: none; */
+    opacity: 0;
+    transition: all .4s;
+    overflow: hidden;
+    height: 0;
+    /* transform: translateY(-200%); */
+}
+
+.mobile-nav.active {
+    display: block;
+    opacity: 1;
+    height: 100%;
+    /* transform: translateY(0); */
+}
+
+.mobile-nav ul {
+    position: relative;
+    transition: all .3s;
+}
+
+.mobile-nav ul li {
+    height: 0.8rem;
+    line-height: 0.8rem;
+    text-align: center;
+    position: relative;
+}
+
+.mobile-nav ul li>a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 0.3rem;
+    color: #fff;
+    line-height: 0.8rem;
+}
+
+.mobile-nav ul li.active {
+    background: #0391ff;
+}
+
+/* 内容部分 */
+
+.join_us_inner {
+    padding: 0.15rem 0.13rem;
+    box-sizing: border-box;
+}
+
+.join_us_item {
+    padding: 0.13rem 0.1rem;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 0.28rem;
+}
+
+.join_us_item>h3 {
+    font-size: 0.45rem;
+    color: #0c2c79;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.join_us_item-1>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.join_us_item-1>ul li {
+    width: 3.43rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.15rem;
+}
+
+.join_us_item-1>ul li>a {
+    display: block;
+    width: 100%;
+}
+
+.join_us_item-1>ul li>a>img {
+    width: 100%;
+}
+
+.join_us_item-2>ol li {
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #f3f3f3;
+    float: left;
+    margin-right: 0.34rem;
+    margin-bottom: 0.39rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join_us_item-2>ol li:nth-child(4n) {
+    margin-right: 0;
+}
+
+.join_us_item-2>ol li>div>img {
+    width: 0.7rem;
+    height: 0.7rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.join_us_item-2>ol li>div>p {
+    color: #0c2c79;
+    font-size: 0.28rem;
+}
+
+.join_us_item-3>ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.join_us_item-3>ul li {
+    width: 3.43rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.15rem;
+}
+
+.join_us_item-3>ul li>a {
+    display: block;
+    width: 100%;
+}
+
+.join_us_item-3>ul li>a>img {
+    width: 100%;
+}
+
+.join_us_item-3>div {
+    width: 100%;
+    display: flex;
+    margin-bottom: 0.1rem;
+}
+
+.join_us_item-3>div>a {
+    display: block;
+    width: 100%;
+}
+
+.join_us_item-3>div>a>img {
+    width: 100%;
+}
+
+.join_us_item-4>ul li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.join_us_item-4>ul li>a {
+    display: block;
+    width: 100%;
+}
+
+.join_us_item-4>ul li a img {
+    width: 100%;
+}
+
+.join_us_item-4>ul li>a>p {
+    color: #3d3d3d;
+    font-size: 0.32rem;
+    padding: 0.15rem 0;
+    margin-top: -0.05rem;
+    text-align: center;
+}
+
+/* loading */
+
+/* loding加载和弹出窗 */
+
+.loading-box,
+.open-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+    z-index: 104;
+}
+
+.loading-box>img {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -0.5rem;
+    margin-left: -0.5rem;
+}
+
+/* 产品经理要求的弹出窗 */
+
+.blue-open-box {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .6);
+    display: block;
+    z-index: 103;
+    display: none;
+}
+
+.blue-open-box .open-box-inner {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    width: 5rem;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    background: #67b6fe;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .4);
+    margin-left: -2.5rem;
+    /* margin-top: 0.5rem; */
+    border-radius: 0.1rem;
+    box-sizing: border-box;
+    /* transition: all .5s; */
+}
+
+@keyframes blue_open_box{
+
+    0%{
+        left: 30%;
+        top: 80%;
+        opacity: 0;
+    }
+    100%{
+        left: 50%;
+        top: 30%;
+        opacity: 1;
+    }
+}
+.blue-open-box.active{
+    display: block;
+}
+.blue-open-box.active  .open-box-inner{
+    animation: blue_open_box .4s ease-in-out 1;
+}
+
+.open-box-inner>i {
+    position: absolute;
+    width: 0.4rem;
+    height: 0.4rem;
+    background: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .3);
+    text-align: center;
+    color: #020880;
+    font-size: 0.3rem;
+    line-height: 0.4rem;
+    font-style: normal;
+    border-radius: 50%;
+    cursor: pointer;
+    right: -0.2rem;
+    top: -0.2rem;
+    user-select: none;
+}
+
+.open-box-inner>p {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: #020880;
+    font-size: 0.29rem;
+}

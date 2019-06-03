@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <meta name="renderer" content="webkit">
+    <script>
+        (function htmlFontSize(){
+			var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+			var w = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+			var width = w > h ? h : w;
+			width = width > 750 ? 750 : width
+			var fz = ~~(width*100000/37.5)/10000
+			document.getElementsByTagName("html")[0].style.cssText = 'font-size: ' + fz +"px";
+			var realfz = ~~(+window.getComputedStyle(document.getElementsByTagName("html")[0]).fontSize.replace('px','')*10000)/5000
+			if (fz !== realfz) {
+				document.getElementsByTagName("html")[0].style.cssText = 'font-size: ' + fz * (fz / realfz) +"px";
+			}
+		})()
+
+        function check_browser() {
+            if (!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                window.location.href = "../pc/index.html";
+            }
+            sessionStorage.setItem('is_mobile', 'yes');
+            return;
+        }       
+        check_browser();
+        window.onresize = function(){
+            check_browser();
+        }
+    </script>
+
+<script>
+    
+</script>
+    
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>春节活动</title>
+
+    <script src="../common/js/jquery.min.js"></script>
+    <script src="../common/js/config.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <audio  controls="controls" style="display:none" src="../common/media/banner.mp3" id="banner_audio"   controls="controls" loop="true" style="position: absolute;width:0'height:0;"></audio>
+        <div class="header">
+            <div class="header-inner-left">
+                <a href="" target="_blank">
+                    <img src="" alt="">
+                </a>
+            </div>
+            <div class="header-inner-right">
+                <div class="login-before">登录</div>
+                <div class="login-after money-info-btn"></div>
+            </div>
+        </div>
+        <div class="cunkuan">
+            <div class="cunkuan-jiangli show-ck-jl"></div>
+            <div class="ling-btn">领取奖励</div>
+            <div class="gonglue-btn">年兽攻略</div>
+            <ul class="fix-right-ul"><li>--<span> -- </span></li><li>--<span> -- </span></li></ul>
+        </div>
+        <div class="banner"></div>
+        <div class="qiandao">
+            <h4>存款100元起即可签到获得大龙炮奖励</h4>
+            <h5>当日中午12:00:00 – 次日中午11:59:59</h5>
+            <ul class="qiandao-cont">
+                <li>
+                    <div class="active"></div>
+                    <p>2月4日</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>2月4日</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>2月4日</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>2月4日</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>2月4日</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>2月4日</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>2月4日</p>
+                </li>
+                
+        </div>
+        <div class="main">
+            <div class="swiper-container swiper-no-swiping">
+                <div class="swiper-wrapper">
+                    <!-- 舞狮绣球 -->
+                    <div class="swiper-slide longs">
+                        <div class="longs-top">
+                            <div class="longs-title-1">
+                                <p>狮子抛绣球 好运在里头</p>
+                                <p>凡是有存款会员皆可免费领取</p>
+                            </div>
+                            <div class="longs-time"></div>
+                        </div>
+                        <div class="longs-bot">
+                            <div class="longs-bot-inner">
+                                <h3>舞狮绣球</h3>
+                                <h4>活动规则</h4>
+                                <ul>
+                                    <li>1. 会员在活动期间「签到」或「兑换爆竹」，就可以参加抢绣球。</li>
+                                    <li>2. 活动页面会倒数提示抛绣球开启时间</li>
+                                    <li>3. 抢到的爆竹请至「讨伐年兽」游戏页面使用</li>
+                                    <li>4. 抢到的彩金不限制游戏平台，1倍有效投注额即可申请出款</li>
+                                    <li>5. 绣球彩金无需申请，次日系统将自动派送。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide nians">
+                        <div class="longs-title-1">
+                            <p>存款炸年兽 累伤害得奖金</p>
+                            <p>不单彩池金 红包也开不停</p>
+                        </div>
+                        <div class="nians-right">
+                            <ul class="nians-right-ul">
+                                <li data-id="1"><span>大龙炮</span><i>0<strong>枚</strong></i></li>
+                                <li data-id="2"><span>冲天炮(小)</span><i>0<strong>枚</strong></i></li>
+                                <li data-id="3"><span>冲天炮(中)</span><i>0<strong>枚</strong></i></li>
+                                <li data-id="4"><span>鞭炮窜(小)</span><i>0<strong>枚</strong></i></li>
+                                <li data-id="5"><span>鞭炮窜(中)</span><i>0<strong>枚</strong></i></li>
+                                <li data-id="6"><span>鞭炮窜(大)</span><i>0<strong>枚</strong></i></li>
+                                <li data-id="7"><span>烟花(小)</span><i>0<strong>枚</strong></i></li>
+                                <li data-id="8"><span>烟花(中)</span><i>0<strong>枚</strong></i></li>
+                                <li data-id="9"><span>综合箱</span><i>0<strong>枚</strong></i></li>
+                            </ul>
+                        </div>
+
+                        <div class="nians-inner">
+                            <div class="sun-shine"></div>
+                            <div class="nians-left">
+                                <img src="./img/nian.gif" alt="" class="nians-img">
+                                <div class="bian-gif-wrap">
+                                    <img src="" alt="">
+                                </div>
+                            </div>
+                            
+                            <div class="now-boom">立即轰炸</div>
+                        </div>
+
+                        <div class="nians-footer">
+                            <div class="nians-table-wrap">
+                                <table class="nians-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>累计伤害</td>
+                                            <td>500</td>
+                                            <td>2000</td>
+                                            <td>5000</td>
+                                            <td>8000</td>
+                                           
+                                        </tr>
+                                        <tr>
+                                            <td>奖金</td>
+                                            <td>6元</td>
+                                            <td>28元</td>
+                                            <td>88元</td>
+                                            <td>128元</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="nians-table-wrap">
+                                <table class="nians-table">
+                                    <tbody>
+                                        <tr>    
+                                            <td>累计伤害</td>
+                                            <td>15000</td>
+                                            <td>25000</td>
+                                            <td>50000</td>
+                                            <td>100000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>奖金</td>
+                                            <td>288元</td>
+                                            <td>388元</td>
+                                            <td>888元</td>
+                                            <td>1688元</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                           
+                            <div class="nians-rules">
+                                <h3>活动规则：</h3>
+                                <ul>
+                                    <li>1.自活动开始之日起，当天的（美东时间计算）每一笔存款将纳入到爆竹累积存款中，存款达到一定的要求，即可领取「现金红包」与对应「爆竹」</li>
+                                    <li>2.累计存款兑换爆竹后即重新计算累计存款金额</li>
+                                    <li>3.当天存款后如玩家未兑换奖励，次日00:00（美东时间）后存款累计金额自动归0</li>
+                                    <li>4.昨日(美东时间)有效投注越高，当日使用爆竹对年兽的伤害就越高</li>
+                                    <li>5.活动期间累计年兽伤害达到一定要求，活动结束后立即派发相对应奖励金</li>
+                                    <li>6.本活动礼金不限制游戏平台，1倍有效投注额即可出款</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide jinz">
+                        <div class="longs-title-1">
+                            <p>年兽伤害 排行榜</p>
+                        </div>
+                        <h4>前100名玩家皆可以享有彩池奖金</h4>
+                        <div class="jinz-left-box" id="jinz-left-box">
+                            <h4></h4>
+                            <div></div>
+                        </div>
+                        <div class="jiangchi" id="jiangchi">111223</div>
+                        <div class="jinz-right">
+                            <div class="jinz-right-head">
+                                    <h3>伤害排行榜</h3>
+                                    <ol>
+                                        <li>名次</li>
+                                        <li>账号</li>
+                                        <li>伤害</li>
+                                    </ol>
+                            </div>
+                            <div class="jinz-right-cont">
+                                <ul class="jinz-right-ul">
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                    <li>
+                                        <span>1</span>
+                                        <span>sdfr***315</span>
+                                        <span>28585309</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="jinz-right-footer">
+                                <h5>目前您的排名</h5>
+                                <ol>
+                                    <li class="self-sort">--</li>
+                                    <li class="self-username">--</li>
+                                    <li class="self-shanghai">--</li>
+                                </ol>
+                            </div>
+                           
+                        </div>
+                        <div class="jinz-footer">
+                            <div class="jinz-table-wrap">
+                                <table class="jinz-table">
+                                    <tbody>
+                                        <tr>
+                                            <td>排 名</td>
+                                            <td>第1名</td>
+                                            <td>第2名</td>
+                                            <td>第3名</td>
+                                            <td>第4名</td>
+                                            <td>第5名</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>彩金</span><p>奖金</p></td>
+                                            <td><span>30%</span><p>彩金</p></td>
+                                            <td><span>20%</span><p>彩金</p></td>
+                                            <td><span>10%</span><p>彩金</p></td>
+                                            <td><span>8%</span><p>彩金</p></td>
+                                            <td><span>6%</span><p>彩金</p></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="jinz-table-wrap">
+                                <table class="jinz-table">
+                                    <tbody>
+                                        <tr>    
+                                            <td>排 名</td>
+                                            <td>6-10名</td>
+                                            <td>11-20名</td>
+                                            <td>21-50名</td>
+                                            <td>50-100名</td>
+                                        </tr>
+                                        <tr>
+                                            <td><span>彩池</span><p>奖金</p></td>
+                                            <td><span>每人可得</span><p>2%彩金</p></td>
+                                            <td><span>每人可得</span><p>1%彩金</p></td>
+                                            <td><span>全体共享</span><p>2%彩金</p></td>
+                                            <td><span>全体共享</span><p>1%彩金</p></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="nians-rules">
+                                <h3>活动规则：</h3>
+                                <ul>
+                                    <li>1.活动期间内会员参加兑换爆竹活动可以增加彩池奖金累计</li>
+                                    <li>2.活动期间内玩家造成年兽伤害，系统将自动累计伤害值进行全服务器玩家排行</li>
+                                    <li>3.活动结束后，全服务器排行前100名之玩家，系统会依照排行名次区间来分配彩池奖金</li>
+                                    <li>4.活动期间累计年兽伤害达到一定要求，活动结束后立即派发奖励金</li>
+                                    <li>5.获得的彩金不限制游戏平台，1倍有效投注额即可申请出款</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination-wrap">
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">Copyright © <span class="footer-copyright"></span> Reserved</div>
+        <audio  controls="controls" style="display:none" src="" id="nians_audio"   controls="controls" loop="true" style="position: absolute;width:0'height:0;"></audio>
+    </div>
+    <div class="login-box">
+        <div class="login-box-inner">
+            <i class="close-login-box"></i>
+            <h3>会员登录</h3>
+            <div>
+                <label for="username"></label>
+                <input type="text" placeholder="账号" id="username">
+            </div>
+            <div>
+                <label for="password"></label>
+                <input type="password" placeholder="密码" id="password">
+            </div>
+            <div class="login-btn-wrap">
+                <a class="login-btn">登录</a>
+                <a target="_blank" class="register-btn">注册</a>
+            </div>
+            <a href="" target="_blank" class="forget-pass-btn">忘记密码</a>
+        </div>
+    </div>
+    <div class="prize-info">
+        <div class="prize-info-inner">
+            <h3>个人中心</h3>
+            <div class="prize-info-inner-box">
+                <h4><span>账号：</span><i class="login-after-username"></i></h4>
+                <p><img src="../pc/img/hb.png" alt="">红包彩金：<span class="self-hb-cj">0</span>元</p>
+                <p><img src="../pc/img/xiuqiu.png" alt="">绣球彩金：<span class="self-xq-cj">0</span>元</p>
+            </div>
+            <p><button class="close-prize-info">确认</button> <a class="login-out">退出登录</a></p>
+        </div>
+    </div>
+    
+    <div class="ling-info">
+        <div class="ling-info-inner">
+            <h3>领取成功</h3>
+            <div class="ling-info-inner-box">
+                <p class="ling-info-inner-box-p1">红包彩金：<span class="ling-hb-cj">0</span>元</p>
+                <p class="ling-info-inner-box-p2">绣球彩金：<span class="ling-xq-cj">0</span>元</p>
+            </div>
+            <button class="close-ling-info">确认</button>
+        </div>
+    </div>
+    <div class="ck-jl">
+        <div class="ck-jl-inner">
+            <h3>存 款 奖 励</h3>
+            <i class="close-ck-jl"></i>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>
+                                <p>累计存款</p>
+                                <p>兑换金额</p>
+                            </div>
+                        </td>
+                        <td><span>500+</span></td>
+                        <td><span>1,000+</span></td>
+                        <td><span>3,000+</span></td>
+                        <td><span>8,000+</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <p>红包</p>
+                                <p>最高彩金</p>
+                            </div>
+                        </td>
+                        <td><span>18元</span></td>
+                        <td><span>38元</span></td>
+                        <td><span>128元</span></td>
+                        <td><span>388元</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <p>兑换</p>
+                                <p>爆竹类型</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p>冲天炮</p>
+                                <p>普通</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p>冲天炮</p>
+                                <p>中级</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p>鞭炮串</p>
+                                <p>普通</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p>鞭炮串</p>
+                                <p>中级</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div>
+                                <p>累计存款</p>
+                                <p>兑换金额</p>
+                            </div>
+                        </td>
+                        <td><span>15,000+</span></td>
+                        <td><span>30,000+</span></td>
+                        <td><span>50,000+</span></td>
+                        <td><span>100,000+</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <p>红包</p>
+                                <p>最高彩金</p>
+                            </div>
+                        </td>
+                        <td><span>888元</span></td>
+                        <td><span>2088元</span></td>
+                        <td><span>3888元</span></td>
+                        <td><span>8888元</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <p>兑换</p>
+                                <p>爆竹类型</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p>鞭炮串</p>
+                                <p>高级</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p>烟花</p>
+                                <p>普通</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p>烟花</p>
+                                <p>中级</p>
+                            </div>
+                        </td>
+                        <td>
+                            <div>
+                                <p>综合</p>
+                                <p>爆竹箱</p>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="gonglue">
+        <div class="gonglue-inner">
+            <i class="close-gonglue"></i>
+            <div class="gonglue-item">
+                <h3>各种爆竹 产生的伤害值</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>爆竹种类</td>
+                            <td>大龙炮</td>
+                            <td>冲天炮(小)</td>
+                            <td>冲天炮(中)</td>
+                        </tr>
+                        <tr>
+                            <td>预估伤害</td>
+                            <td>25~100+</td>
+                            <td>40~150+</td>
+                            <td>100~250+</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>爆竹种类</td>
+                            <td>鞭炮串(小)</td>
+                            <td>鞭炮串(中)</td>
+                            <td>鞭炮串(大)</td>
+                        </tr>
+                        <tr>
+                            <td>预估伤害</td>
+                            <td>150~350+</td>
+                            <td>10~40+</td>
+                            <td>200~450+</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>爆竹种类</td>
+                            <td>烟花(小)</td>
+                            <td>烟花(中)</td>
+                            <td>综合箱</td>
+                        </tr>
+                        <tr>
+                            <td>预估伤害</td>
+                            <td>350~600+</td>
+                            <td>500~750+</td>
+                            <td>600~1000+</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="color:#ffd370;font-size: 0.3rem;text-align: center;">爆竹伤害均为"预估伤害"范围内的随机值</p>
+            <div class="gonglue-item">
+                <h3>爆竹伤害加成</h3>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>昨日日累计流水</td>
+                            <td><span>1,000+</span></td>
+                            <td><span>5,000+</span></td>
+                            <td><span>20,000+</span></td>
+                            <td><span>50,000+</span></td>
+                            <td><span>100,000+</span></td>
+                        </tr>
+                        <tr>
+                            <td>伤害加成</td>
+                            <td>3%</td>
+                            <td>5%</td>
+                            <td>8%</td>
+                            <td>12%</td>
+                            <td>17%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>今日累计流水</td>
+                            <td><span>300,000+</span></td>
+                            <td><span>500,000+</span></td>
+                            <td><span>1,000,000+</span></td>
+                            <td><span>3,000,000+</span></td>
+                        </tr>
+                        <tr>
+                            <td>伤害加成</td>
+                            <td>23%</td>
+                            <td>30%</td>
+                            <td>40%</td>
+                            <td>50%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="color:#ffd370;font-size: 0.3rem;text-align: center;">（预估伤害）X （伤害加成） = 实际伤害</p>
+        </div>
+    </div>
+    <div class="fixed-qiu">
+        <div class="qiu-cont">
+        </div>
+
+        <div class="qiu-left">
+            <div class="qiu-left-1"></div>
+            <div class="qiu-left-2"></div>
+            <div class="qiu-left-3"></div>
+            <div class="qiu-left-mask"></div>
+        </div>
+        
+        <div class="qiu-right">
+            <div class="qiu-right-1"></div>
+            <div class="qiu-right-2"></div>
+            <div class="qiu-right-3"></div>
+            <div class="qiu-right-mask"></div>
+        </div>
+    </div>
+
+    <div class="get-info">
+        <div class="get-info-inner">
+            <h3>本次获得</h3>
+            <div class="get-info-inner-box">
+                <p><img src="../pc/img/icon-1.png" alt="">大龙炮：<span class="da-long-count">0</span>个</p>
+                <p><img src="../pc/img/gold-coin.png" alt="">彩金：<span class="da-long-money">0</span>元</p>
+            </div>
+            <button class="close-get-info">确认</button>
+        </div>
+    </div>
+    <script>
+    </script>
+    <script src="../common/js/swiper.min.js"></script>
+    <script src="../common/js/jquery.fly.min.js"> </script>
+    <script src="../common/js/func.js"></script>
+    <script src="../common/js/api.js"></script>
+    <script src="../common/js/init.js"></script>
+    <script src="../common/js/index.js"></script>
+    <script src="../common/js/countUp.min.js"></script>
+</body>
+</html>

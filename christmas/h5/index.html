@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection"content="telephone=no, email=no" />
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="../common/css/swiper.min.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>双旦活动</title>
+     
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'onorientationchange' in window ? 'onorientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if (clientWidth >= 750) {
+                        docEl.style.fontSize = '100px';
+                    } else {
+                        docEl.style.fontSize = 100 * (clientWidth / 640) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+
+        function check_browser() {
+            if (!/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                window.location.href = "../pc/index.html";
+            }
+            sessionStorage.setItem('is_mobile', 'yes');
+            return;
+        }       
+        check_browser();
+        window.onresize = function(){
+            check_browser();
+        }
+    </script>
+    <script src="../common/js/jquery.min.js"></script>
+    <script src="../common/js/config.js"></script>
+</head>
+<body>
+    <audio src="../common/media/bgMius1.mp3" id="myaudio" controls="controls" loop="false" hidden="true"></audio>
+    <div class="header">
+        <div class="header-inner-left">
+            <a href="" target="blank">
+                <img src="" alt="">
+            </a>
+        </div>
+        <div class="header-inner-right">
+            <div class="head-login-before">
+                <span class="ready-login-btn">会员登录</span>
+            </div>
+            <div class="head-login-after open-mobile-center"></div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="banner">
+            <div class="banner-inner">
+                <div class="count_down_wrap">
+                    <h3>红包雨倒计时：</h3>
+                    <div class="count_down">
+                        <span class="day_num"></span>
+                        <!-- <span class="hour_num"></span>
+                        <span class="min_num"></span>
+                        <span class="sec_num"></span> -->
+                    </div>
+                </div>
+                <div class="pic-1-inco">
+                    <img src="../pc/img/pic-inco_02.png" class="pic-1-inco-img0">
+                    <img src="../pc/img/pic1-inco_02.png" class="pic-1-inco-img1">
+                    <img src="../pc/img/pic-inco_04.png" class="pic-1-inco-img2">
+                    <img src="../pc/img/pic1-inco_04.png" class="pic-1-inco-img3">
+                </div>
+            </div>
+        </div>
+        <!-- 签到 -->
+        <div class="panel-1">
+            <div class="light-wrap">
+                <img src="../pc/img/light-left.png" alt="">
+                <img src="../pc/img/light-right.png" alt="">
+            </div>
+            <div class="panel-1-inner">
+                <div class="panel-1-cont panel-box-style">
+                    <div class="panel-1-son panel-box-son-style">
+                        <h3>每日签到有惊喜</h3>
+                        <h4>连续签到<span class="qiandao-days">0天</span> </h4>
+                        <h5>连续签到3天–赠送 青铜轮盘抽奖1次 / 白银轮盘抽奖1次 / 100积分</h5>
+                        <p>每日签到可获得积分与轮盘抽奖机会，连续签到天数越多，可获得更多更高额的抽奖轮盘！左手积分换商品右手轮盘抽现金，好礼永远不停歇！</p>
+                        <p style="font-size:13px;color:#fff;"><span style="color:#fff000">友情提示：</span>签到时间为美东时间当日的中午12点-次日的11点59分</p>
+                        <span>活动时间：2018/12/22 – 2019/01/04</span>
+                        <ul class="qiandao-ul-wrap">
+                            <li class="active"> <span>22日 </span> </li>
+                            <li class="active"> <span>23日 </span> </li>
+                            <li class="active"> <span>24日 </span> </li>
+                            <li class="active"> <span>25日 </span> </li>
+                            <li class="active"> <span>26日 </span> </li>
+                            <li class="active"> <span>27日 </span> </li>
+                            <li class="active"> <span>28日 </span> </li>
+                            <li> <span>29日 </span> </li>
+                            <li> <span>30日 </span> </li>
+                            <li> <span>31日 </span> </li>
+                            <li> <span>1日 </span> </li>
+                            <li> <span>2日 </span> </li>
+                            <li> <span>3日 </span> </li>
+                            <li> <span>4日 </span> </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <a class="show-rules-wrap">活动规则</a>
+        </div>
+        <!-- 轮盘 -->
+        <div class="panel-2">
+            <div class="light-wrap">
+                <img src="../pc/img/light-left.png" alt="">
+                <img src="../pc/img/light-right.png" alt="">
+            </div>
+
+            <div class="panel-2-inner">
+                <div class="panel-2-cont  panel-box-style">
+                    <div class="panel-2-son panel-box-son-style">
+                        <h3>轮盘得积分</h3>
+                        <div class="panel-2-box">
+                            <div class="panel-2-box-top">
+                                <div class="panel-2-box-top-2">
+                                    <h3>可转次数：<span>15</span><i>次</i></h3>
+                                    <h4>（中级抽奖5次可兑换1次高级抽奖）</h4>
+                                </div>
+                            </div>
+                            <div class="panel-2-lunpan">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide" >
+                                            <div class="qingtong-wrap">
+                                                <div class="qingtong-lunpan lunpan-wrap">
+                                                    <div class="qingtong-inner lunpan-cont"></div>
+                                                    <div class="qingtong-btn lunpan-btn"></div>
+                                                </div>
+                                                <p class="lunpan-text">青铜转盘</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" >
+                                            <div class="baiyin-wrap">
+                                                <div class="baiyin-lunpan lunpan-wrap">
+                                                    <div class="baiyin-inner lunpan-cont"></div>
+                                                    <div class="baiyin-btn lunpan-btn"></div>
+                                                </div>
+                                                <p class="lunpan-text">白银转盘</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" >
+                                            <div class="huangjin-wrap">
+                                                <div class="huangjin-lunpan lunpan-wrap">
+                                                    <div class="huangjin-inner lunpan-cont"></div>
+                                                    <div class="huangjin-btn lunpan-btn"></div>
+                                                </div>
+                                                <p class="lunpan-text">黄金转盘</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide" >
+                                            <div class="zuanshi-wrap">
+                                                <div class="zuanshi-lunpan lunpan-wrap">
+                                                    <div class="zuanshi-inner lunpan-cont"></div>
+                                                    <div class="zuanshi-btn lunpan-btn"></div>
+                                                </div>
+                                                <p class="lunpan-text">钻石转盘</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-prev"></div>
+                                    <div class="swiper-button-next"></div>
+
+                                    <!-- Add Pagination -->
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="panel-2-box-top-1">
+                <a class="show-self-his"> 中奖历史 </a>
+                <a class="show-list-his"> 中奖名单 </a>
+                <a class="exhcange-more-high">兑换高级轮盘</a>
+            </div>
+            
+        </div>
+        <!-- 许愿 -->
+        <div class="panel-3">
+                <div class="light-wrap">
+                    <img src="../pc/img/light-left.png" alt="">
+                    <img src="../pc/img/light-right.png" alt="">
+                </div>
+    
+                <div class="panel-3-inner">
+                    <h3>圣诞许愿拿大奖</h3>
+                    <div class="panel-3-cont  panel-box-style">
+                        <div class="panel-3-son panel-box-son-style">
+                            <div class="panel-3-box">
+                                <div class="panel-3-box-inner">
+                                    <ul class="marquee-ul-1">
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="xuyuan-title">
+                                                <span>用户：sx***</span>
+                                                <strong>2018/12/4</strong>
+                                            </div>
+                                            <div class="xuyuan-cont">
+                                                <p>希望会撒娇课程撒开车那时刻才能卡西安奥斯 科技 阿萨德 啥基督教好看 看自行车新 年开始宣传你看</p>
+                                                <strong>
+                                                    <span  class="love-btn"></span>
+                                                </strong>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="xuyuan-btn">我要许愿</div>
+                </div>
+        </div>
+         <!-- 活动规则 -->
+         <div class="panel-4">
+                <div class="light-wrap">
+                    <img src="../pc/img/light-left.png" alt="">
+                    <img src="../pc/img/light-right.png" alt="">
+                </div>
+                
+                <div class="panel-4-inner">
+                    <div class="panel-4-cont  panel-box-style">
+                        <div class="panel-4-son panel-box-son-style">
+                            <h3>活动规则</h3>
+                            <ul>
+                                <li><span>1.</span>(CNY)为结算金额，计时区间以活动页面上方时区为主；</li>
+                                <li><span>2.</span>每一位玩家只能拥有一个会员账号，若发现一位玩家名下拥有多个会员账号，我司将无条件冻结该会员其他账号，仅保留会员首次注册的账号供会员游戏；</li>
+                                <li><span>3.</span>若发现会员利用不诚信手段套取优惠彩金，我司保留取消会员优惠彩金及其相应盈利甚至冻结会员账号的权利；</li>
+                                <li><span>4.</span>若会员对活动有争议，为确保双方利益，杜绝身份盗用行为，我司有权要求会员提供充足有效的文件用以确认是否享有该优惠的资质；</li>
+                                <li><span>5.</span>系统将自动计算会员当日存款金额，但是会员可自由选择是否参与此优惠活动；</li>
+                                <li><span>6.</span>对冲、对赌、倍投、软件投注、无风险投注等投注方式为违规投注，我司保留取消会员优惠彩金及其相应盈利甚至冻结会员账号的权利；</li>
+                                <li><span>7.</span>本公司将保留对活动的最终解释权及随时终止此活动的权利，并不作提前通知。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="footer">Copyright © <span class="footer-copyright"></span> Reserved</div>
+    <div class="loading">
+        <div class="loading-inner">
+            <img src="../common/img/loading.gif" alt="">
+        </div>
+    </div>
+    <div class="fixed-right-wrap">
+        <div class="fixed-right active">
+            <div class="cunkuan-info">
+                <p>存款已达到<span class="cunkuan-money">5000</span></p>
+                <p>获得<span class="cunkuan-times readychuji">3</span>次青铜轮盘</p>
+                <p>获得<span class="cunkuan-times readyzhongji">3</span>次白银轮盘</p>
+                <p>获得<span class="cunkuan-times readygaoji">3</span>次黄金轮盘</p>
+                <p>获得<span class="cunkuan-times readychaoji">3</span>次钻石轮盘</p>
+                <a class="cunkuan-btn">领取</a>
+            </div>
+            <a class="concat-custer" target="_blank">联系客服</a>
+            <a class="go-top">返回顶部</a>
+            <a class="close-music">关闭音乐</a>
+            <a href="" target="_blank" class="go-jifen-mall">前往积分商城</a>
+        </div>
+        <span class="show-fixed-right active"></span>
+    </div>
+    <!-- 个人中心 -->
+    <div class="self-center">
+        <div class="self-center-inner">
+            <i class="close-self-center"></i>
+            <h3><span class="footer-copyright"></span>欢迎你</h3>
+            <div>
+                <p>账号：<span class="user-name">111</span></p>
+            </div>
+            <div>
+                <p>积分：<span class="user-score">2222</span></p>
+            </div>
+            <div>
+                <p>总彩金：<span class="all-money">2222</span></p>
+            </div>
+            <a class="login-out">退出登录</a>
+        </div>
+    </div>
+    <!-- 登录弹窗 -->
+    <div class="login-box">
+        <div class="login-box-inner">
+            <i class="close-login-box"></i>
+            <h3>会员登录</h3>
+            <div>
+                <label for="username">账号：</label>
+                <input type="text" id="username" placeholder="请输入账号">
+            </div>
+            <div>
+                <label for="psaaword">密码：</label>
+                <input type="password" placeholder="请输入密码" id="password">
+            </div>
+            <a class="login-btn">登录</a>
+        </div>
+    </div>
+    <!-- 签到成功 -->
+    <div class="qiandao-succ fixed-item">
+        <div class="qiandao-succ-inner">
+            <i class="close-qiandao-succ"></i>
+            <img src="../pc/img/qiandao-succ-inner.png" alt="">
+            <!-- <h3>已连续签到1天</h3> -->
+            <p class="qiandao_h5">获得一次青铜轮盘抽奖机会</p>
+            <p class="qiandao_p">获得50商城积分</p>
+        </div>
+    </div>
+    <!-- 签到失败 -->
+    <div class="qiandao-faild fixed-item">
+        <div class="qiandao-faild-inner">
+            <i class="close-qiandao-faild"></i>
+            <p>您今天已经签到完毕，请明天再试。</p>
+        </div>
+    </div>
+    <!-- 轮盘没抽到 -->
+    <div class="lunpan-faild fixed-item">
+        <div class="lunpan-faild-inner">
+            <i class="close-lunpan-faild"></i>
+            <h3>很遗憾</h3>
+            <p>您和奖品就差一丢丢</p>
+        </div>
+    </div>
+    <!-- 轮盘抽到 -->
+    <div class="lunpan-succ fixed-item">
+        <div class="lunpan-succ-inner">
+            <i class="close-lunpan-succ"></i>
+            <h3>恭喜您</h3>
+            <p>获得<span>1</span>次<span>黄金转盘</span>机会</p>
+        </div>
+    </div>
+    <!-- 中奖历史 -->
+    <div class="self-his fixed-item">
+        <div class="self-his-inner">
+            <i class="close-self-his"></i>
+            <h3>中奖历史</h3>
+            <div class="self-his-box">
+                <div class="self-his-box-son">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>中奖积分</th>
+                                <th>中奖时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                            <tr>
+                                <td><span>200</span> 积分</td>
+                                <td>2018/12/24</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 中奖名单 -->
+    <div class="list-his fixed-item">
+        <div class="list-his-inner">
+            <i class="close-list-his"></i>
+            <h3>中奖名单</h3>
+            <div class="list-his-box">
+                <div class="list-his-box-son">
+                    <ul class="marquee-list-ul-1">
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                        <li>
+                            <h4>恭喜sy***</h4>
+                            <p>获得积分<span>200</span> </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 我要许愿 -->
+    <div class="i-want fixed-item">
+        <div class="i-want-inner">
+            <i class="close-i-want"></i>
+            <h3>留言许愿</h3>
+            <div class="textArea-wrap">
+                <textarea placeholder="请写下您的圣诞愿望，愿望在50个字内。" style="min-height: 3rem;min-width: 4.8rem;max-height: 3rem; max-width: 4.8rem;" id="i-want-value"></textarea>
+            </div>
+            <a class="i-want-btn">送出愿望</a>
+        </div>
+    </div>
+    <!-- 愿望送出 -->
+    <div class="want-done fixed-item">
+        <div class="want-done-inner">
+            <i class="close-want-done"></i>
+            <h3>您的愿望已送出。</h3>
+        </div>
+    </div>
+     <!-- 活动规则弹窗 -->
+     <div class="rules-wrap">
+        <div class="rules-inner">
+            <i class="close-rules-wrap"></i>
+            <h3>活动规则</h3>
+            <p>客户完成签到任务<span>(需达到当日500有效投注)</span>，可免费领取<span>1次青铜轮盘抽奖</span> 和<span>6 – 66随机商城积分</span>。完成连续签到任务，可免费获得白银、黄金轮盘抽奖。不只签到送抽奖，您存款 我也送！传说级土豪必得超级轮盘就在这等您！</p>
+            <h4>连续签到额外赠送详情</h4>
+            <ul>
+                <li>连续签到<span>3</span>天 –赠送 青铜轮盘抽奖1次 / 白银轮盘抽奖1次 / 100积分</li>
+                <li>连续签到<span>5</span>天 –赠送 青铜轮盘抽奖1次 / 白银轮盘抽奖1次 / 200积分</li> 
+                <li>连续签到<span>7</span>天 –赠送 青铜轮盘抽奖1次 / 黄金轮盘抽奖1次 / 300积分</li> 
+                <li>连续签到<span>10</span>天 –赠送 青铜轮盘抽奖1次 / 黄金轮盘抽奖1次 / 500 积分</li> 
+                <li>连续签到<span>12</span>天 –赠送 青铜轮盘抽奖1次 / 白银轮盘抽奖1次 / 黄金轮盘抽奖1次 / 666积分 </li> 
+                <li>连续签到<span>14</span>天 –赠送 青铜轮盘抽奖1次 / 白银轮盘抽奖1次 / 黄金轮盘抽奖1次 / 888积分 </li>
+            </ul>
+            <!-- <h4 style="color:#fff; font-weight: normal;font-size: 0.3rem;">友情提示：每人每天最多可以兑换3次</h4> -->
+            <h4>存款赠送抽奖</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th>当日累计存款</th>
+                        <th>青铜轮盘 (次)</th>
+                        <th>白银轮盘 (次)</th>
+                        <th>黄金轮盘 (次)</th>
+                        <th>钻石轮盘 (次)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>满 500+</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>满 1,000+</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>满 5,000+</td>
+                        <td>5</td>
+                        <td>1</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>满 10,000+</td>
+                        <td>10</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>满 30,000+</td>
+                        <td>15</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>满 50,000+</td>
+                        <td>20</td>
+                        <td>6</td>
+                        <td>2</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>满 100,000+</td>
+                        <td>25</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>满 200,000+</td>
+                        <td>35</td>
+                        <td>8</td>
+                        <td>4</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>满 500,000+</td>
+                        <td>50</td>
+                        <td>20</td>
+                        <td>10</td>
+                        <td>8</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h6>* 以上次数为不叠加</h6>
+        </div>
+    </div>
+    <!-- 红包雨 -->
+    <div id="petalbox"></div>
+    <!-- 红包结束 -->
+    <div class="hb-end">
+        <div class="hb-end-inner">
+            <i class="close-hb-end"></i>
+            <h3>本轮红包雨已结束</h3>
+            <p><strong>账户：</strong><span class="hb-user-name">esdfsdf的孙菲菲s</span></p>
+            <p><strong>抢到红包数：</strong><span class="hb-count">45</span><i>个</i></p>
+            <p><strong>抢到红包金额：</strong><span class="hb-money">69</span><i>元</i> </p>
+            <!-- <p><strong>总计彩金：</strong><span>629</span><i>元</i> </p> -->
+            <p>彩金会在<span>2</span>小时内存到您的个人账户</p>
+        </div>
+    </div>
+    <script src="../common/js/jquery.rotate.min.js"></script>
+    <script src="../common/js/swiper.min.js"></script>
+    <script src="../common/js/timeCountDown.js"> </script>
+    <script src="../common/js/func.js"></script>
+    <script src="../common/js/api.js"></script>
+    <script src="../common/js/init.js"></script>
+    <script src="../common/js/index.js"></script>
+    <script src="../common/js/hb.js"></script>
+</body>
+</html>

@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="//b62img.clsj365.com/assets/img/favicon.ico?1">
+    <script>
+        function check() {
+            if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                window.location.href = "../m/index.html";
+            }
+            return;
+        }
+        check();
+        window.onresize = function(){
+            check();
+        }
+    </script>
+    <link rel="stylesheet" href="../common/css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>中秋活动</title>
+</head>
+<body>
+    <div class="contain">
+        <div class="banner">
+            <div class="ban-wrap clear-fix">
+                <div class="ban-left">
+                    <a href="https://www.b62dd.com">
+                        <img src="./img/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="ban-right">
+                    <div class="login-before">
+                        <label >会员账号：<input type="text" id="username" placeholder="输入账号"></label>
+                        <label >会员密码：<input type="password" id="password" placeholder="输入密码"></label>
+                        <a href="https://www.b62dd.com/signup" target="_blank">注册</a>
+                        <a class="user-login">登录</a>
+                    </div>
+                    <div class="login-after">
+                        <label>我的礼包：<span class="login-after-libao">555</span></label>
+                        <label>我的积分：<span class="login-after-jifen">6666<i>分</i></span></label>
+                        <label ><span class="login-out" style="cursor: pointer;">退出登录</span></label>
+                        <!-- <label>我的数字月饼：<span class="login-after-yuebing">999<i>个</i></span></label> -->
+                    </div>
+                </div>
+
+            </div> 
+            
+        </div>
+        <div class="ban-qizi"></div>
+        <div class="ban-tuzi"></div>
+        <div class="main">
+            <div class="main-inner">
+                <div class="main-libao">
+                    <h3 class="md_cunkuan"></h3>
+                    <div class="libao-his-wrap clear-fix">
+                        <button class="libao-his-btn">礼包开奖记录</button>
+                    </div>
+
+                    <p class="liba-text">
+                        活动时间内09/21 12:00～10/10 12:00存款可兑换『月饼礼包』，1天可以「兑换礼包」5次。开启「月饼礼包」可取得1~24随机编号「月饼」。达到收集条件可兑换百万跑车、豪华双人旅游与各式精品。每天中午12:00 (北京时间)，系统将重新计算存款金额与兑换次数，会员存款后切记点选【兑换礼包】，逾时则视同放弃。
+                    </p>
+
+                    <div class="libao-cont clear-fix">
+                        <div class="libao-left">
+                                <h4>存款金额兑换月饼礼包</h4>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>存款金额（元）</th>
+                                            <th>月饼礼包</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>100–499</td>
+                                            <td>1个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>500–1,999</td>
+                                            <td>3个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2,000–4,999</td>
+                                            <td>5个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5,000–9,999</td>
+                                            <td>7个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10,000 及以上</td>
+                                            <td>10个</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- <p class="libao-left-p">范例：会员当日首存150领取1个礼包、第2次存2300领取5个礼包、第3次存600可领取3个礼包… 依此类推。</p> -->
+                                <p class="libao-left-p">范例： 1存 1000.  2存4000. 此时 [换取礼包]. 会员将得到 1000+4000=5000 . 7个礼包 3存 500. 4存 1600. 此时 [换取礼包]. 会员将得到 500+1600=2100. 5个礼包 依此类推...</p>
+                                <div class="libao-btn-wrap">
+                                    <button class="duihuan_libao">兑换礼包</button>
+                                    <button class="mianfei_delibao">免费得礼包</button>
+                                </div>
+                        </div>
+                        <div class="libao-right">
+                            <div class="libao-box-header"></div>
+                            <div class="libao-box-body">
+                                <button class="libao-kai-btn"></button>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                <div class="main-shuzi">
+                    <h3 class="md_shiwu"></h3>
+                    <div class="shuzi-btn-wrap">
+                        <a class="look-shuzi-btn">查看当前月饼数</a>
+                        <a class="his-shuzi-btn">礼品兑换记录</a>
+                        <p>备注：各类实物奖品仅限兑换一次</p>
+                    </div>
+                    <div class="shuzi-slide-wrap">
+                        <div class="shuzi-slide-cont">
+                            <div class="hd">
+                                <a class="next"></a>
+                                <ul>
+                                    <li class="on">1</li>
+                                    <li class="">2</li>
+                                    <li class="">3</li>
+                                    <li class="">4</li>
+                                    <li class="">5</li>
+                                    <li class="">6</li>
+                                    <li class="">7</li>
+                                    <li class="">8</li>
+                                    <li class="">9</li>
+                                    <li class="">10</li>
+                                </ul>
+                                <a class="prev"></a>
+                            </div>
+            
+                            <div class="bd">
+                                <ul class="picList">
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img src="./img/cars/p1.png" alt="">
+                                            <h4>玛莎拉蒂总裁轿车</h4>
+                                            <p>兑换条件：01-24月饼各<span>150</span>个</p>
+                                        </div>
+                                        <button class="shuzi-dui-now-btn" data-id="1"></button> 
+                                    </li>
+                                </ul>
+                            </div>
+            
+                        </div>
+                    </div>
+
+                </div>
+                <div class="main-jifen">
+                    <h3 class="md_jifen"></h3>
+                    <div class="main-jifen-btn-wrap">
+                        
+                        <div>
+                            <p class="get_touzhu-jifen">怎样获得投注积分?</p>
+                            <button  class="look-my-jifen">我的积分</button>
+                            <!-- <p>●兔子猜大小  ●现金彩蛋</p> -->
+                        </div>
+                       
+                    </div>
+                    <p style="text-align: center;">
+                        活动期间内投注「全馆游戏」或开「月饼礼包」可获得「积分」。累计积分可以开启国庆彩蛋拿得彩金。
+                    </p>
+                    <h4></h4>
+                    <div class="caidan-wrap clear-fix">
+                        <div class="caidan-left">
+                            <h3>积分兑换彩蛋</h3>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>彩蛋名称</th>
+                                        <th>兑换积分</th>
+                                        <th>最高奖金</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>白银国庆彩蛋</td>
+                                        <td>100</td>
+                                        <td>3888元</td>
+                                    </tr>
+                                    <tr>
+                                        <td>黄金国庆彩蛋</td>
+                                        <td>250</td>
+                                        <td>8888元</td>
+                                    </tr>
+                                    <tr>
+                                        <td>钻石国庆彩蛋</td>
+                                        <td>500</td>
+                                        <td>18888元</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="caidan-right">
+                            <ul class="clear-fix">
+                                <li data-did="3"></li>
+                                <li data-did="2"></li>
+                                <li data-did="1"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- <p style="color: #f3e32c;font-size: 21px;text-align: center;">温馨提示：当日获得砸蛋彩金，系统将于次日06:00（美东时间）之前自动派发至您的账户上！</p> -->
+                </div>
+                <div class="main-shaizi">
+                    <h3></h3>
+                    <p>会员可以使用「积分」游玩「兔子比大小」游戏，让您赚取更多积分！换取更多彩蛋！</p>
+                    <div class="main-shaizi-wrap clear-fix">
+                        <div class="main-shaizi-left">
+                            <h3>游戏说明</h3>
+                            <ul>
+                                <li>1. 点选 - 猜大小开启 </li>
+                                <li>2. 猜选【大】或【小】。 （1.2.3.为【小】/ 4.5.6为【大】）</li>
+                                <li>3. 输入下注积分</li>
+                                <li>4. 如果获胜，可以获得下注积分的2倍。如果输了，扣除会员下注积分</li>
+                            </ul>
+                            <a href="javascript:void(0)" class="guess-big-samll">猜大小开启</a>
+                        </div>
+                        <div class="main-shaizi-right">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="main-footer">
+                        Copyright 2009-2018©bet365 保留所有权利 
+                </div>
+                <div class="main-maodian">
+                    <div class="maodian-img-wrap">
+                        <img src="./img/maodian-img-wrap.png" alt="">
+                    </div>
+                    <ul>
+                        <li> <a href="javascript:void(0)" class="go_md_cunkuan">存款礼包</a></li>
+                        <li> <a href="javascript:void(0)" class="go_md_shiwu">实物兑换</a></li>
+                        <li> <a href="javascript:void(0)" class="go_md_jifen">积分游戏</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="fixed-wrap">
+            <div class="loading-inner">
+                <img src="./img/loading.gif" alt="">
+            </div>
+
+            <div class="toast-inner">
+                <span>提示：</span>
+                <p>恭喜您，领取成功</p>
+            </div>
+
+            <div class="libao-his-inner">
+                <h3>礼包开奖记录</h3>
+                <i class="close-libao-his">×</i>
+                <div class="libao-his-inner-table-box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>时 间</th>
+                                <th colspan="2">礼包获奖内容</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2018.08.13</td>
+                                <td>礼包积分：50分</td>
+                                <td>数字月饼：1、5、8、12、15</td>
+                            </tr>
+                            <tr>
+                                <td>2018.08.13</td>
+                                <td>礼包积分：50分</td>
+                                <td>数字月饼：1、5、8、12、15</td>
+                            </tr>
+                            <tr>
+                                <td>2018.08.13</td>
+                                <td>礼包积分：50分</td>
+                                <td>数字月饼：1、5、8、12、15</td>
+                            </tr>
+                            <tr>
+                                <td>2018.08.13</td>
+                                <td>礼包积分：50分</td>
+                                <td>数字月饼：1、5、8、12、15</td>
+                            </tr>
+                            <tr>
+                                <td>2018.08.13</td>
+                                <td>礼包积分：50分</td>
+                                <td>数字月饼：1、5、8、12、15</td>
+                            </tr>
+                            <tr>
+                                <td>2018.08.13</td>
+                                <td>礼包积分：50分</td>
+                                <td>数字月饼：1、5、8、12、15</td>
+                            </tr>
+                            <tr>
+                                <td>2018.08.13</td>
+                                <td>礼包积分：50分</td>
+                                <td>数字月饼：1、5、8、12、15</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="open-libao">
+                <div class="open-libao-shine"></div>
+                <!-- <h3 class="open-libao-title"></h3> -->
+                <i class="close-open-libao">×</i>
+                <div class="open-libao-cont">
+                    <h3>要打开几个礼包</h3>
+                    <h4>总计礼包数：<span class="total-libao-number">45</span>个</h4>
+                    <p><i class="add-libao-number">+</i> <input type="number" class="change-libao-number" value="5"> <i class="minus-libao-number">-</i><i class="change-all-libao-number">全部</i></p>
+                </div>
+                <div class="open-libao-btn-wrap">
+                    <button class="open-libao-btn">开启</button>
+                    <button class="open-libao-btn-cancel">取消</button>
+                </div>
+               
+            </div>
+
+            <div class="sure-open-libao">
+                <div class="open-libao-shine"></div>
+                <h3 class="open-libao-title"></h3>
+                <i class="close-sure-open-libao">×</i>
+                <div class="sure-open-libao-cont">
+                    <div class="sure-open-libao-inner">
+                        <div class="sure-open-libao-inner-yb">
+                            <span>1<i>3</i></span>
+                            <span>1<i>3</i></span>
+                            <span>1<i>3</i></span>
+                            <span>1<i>3</i></span>
+                            <span>1<i>3</i></span>
+                            <span>1<i>3</i></span>
+                            <span>1<i>3</i></span>
+                            <span>1<i>3</i></span>
+                            <span>1<i>3</i></span>
+                            <span>1<i>3</i></span>
+                        </div>
+                        <h4>礼包积分<span class="sure-open-libao-inner-yb-score">500</span>分</h4>
+                    </div>
+                </div>
+                <div class="sure-open-libao-ling">点击领取</div>
+            </div>
+            <div class="open-libao-faild">
+                <div class="open-libao-faild-shine"></div>
+                <h3 class="open-libao-faild-title"></h3>
+                <i class="close-dui-libao-2">×</i>
+                <div class="open-libao-faild-cont"></div>
+                <div class="open-libao-faild-btn-wrap">
+                    <a href="https://www.b62dd.com/" class="open-libao-fiald-btn-1" target="_blank">立即存款</a>
+                    <a class="open-libao-fiald-btn-2">免费礼包</a>
+                </div>
+            </div>
+            <!-- 免费得礼包 -->
+            <div class="free-get-libao">
+                <i class="close-free-get-libao">×</i>
+                <h3>好友推荐赠豪礼</h3>
+                <h4>分享链接或截二维码给好友注册并存款游戏， 线下朋友总存款累计，当日最高可免费享有150次抽奖机会！除了自己本身，好友也可以免费获得额外的礼包喔！</h4>
+                <div class="free-get-cont clear-fix">
+                    <div  class="free-get-left">
+                        <div class="free-get-left-inner">
+                            <img src="./img/free-get-qcode.png" alt="">
+                        </div>
+                        <p id="target_text"></p>
+                        <button data-clipboard-action="copy" data-clipboard-target="#target_text" id="copy_btn"></button>
+                    </div>
+
+                    <div  class="free-get-right">
+                        <div class="free-get-right-wrap clear-fix">
+                            <div>
+                                <h3>好友 免费加赠</h3>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>被推荐人当日累计存款</th>
+                                            <th>额外加赠月饼礼包</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>100+</td>
+                                            <td>1个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>500+</td>
+                                            <td>2个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1000+</td>
+                                            <td>3个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3000+</td>
+                                            <td>5个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5000+</td>
+                                            <td>7个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10000+</td>
+                                            <td>10个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>30000+</td>
+                                            <td>15个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>50000+</td>
+                                            <td>20个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>100000+</td>
+                                            <td>30个</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div>  
+                                <h3>推荐人 免费加赠</h3> 
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>好友当日总累计存款</th>
+                                            <th>推荐人可获得礼包</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>500+</td>
+                                            <td>3个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2500+</td>
+                                            <td>10个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5000+</td>
+                                            <td>20个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15000+</td>
+                                            <td>30个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>30000+</td>
+                                            <td>40个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>50000+</td>
+                                            <td>55个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>150000+</td>
+                                            <td>75个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>250000+</td>
+                                            <td>120个</td>
+                                        </tr>
+                                        <tr>
+                                            <td>500000+</td>
+                                            <td>150个</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <p>贴心提醒：当日存款，次日北京时间 12：30赠送至您的账户。</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- 兑换礼包 -->
+
+            <div class="dui-libao-1">
+                <h3>兑换礼包</h3>
+                <i class="close-dui-libao-1">×</i>
+                <div class="dui-libao-1-cont">
+                    <h4>请问兑换礼包吗？</h4>
+                    <div>
+                        <button class="open-dui-libao-2">换取礼包</button>
+                        <button class="dui-libao-1-free-get">免费得礼包</button>
+                    </div>
+                </div>
+            </div>
+            <!-- 可以换礼包 -->
+            <div class="dui-libao-2">
+                <div class="open-libao-shine"></div>
+                <h3 class="open-libao-title"></h3>
+                <i class="close-dui-libao-2">×</i>
+                <div class="sure-dui-libao-cont">
+                    <div class="sure-dui-li-bao-2-inner">
+                        <h5>第<span class="sure-dui-li-bao-2-inner-count">1</span>次存款得礼包</h5>
+                        <p>获得<span class="sure-dui-li-bao-2-inner-num">50</span>个礼包</p>
+                    </div>
+                </div>
+                <div class="open-libao-2-btn">立即开启</div>
+            </div>
+            <!-- 不能换礼包 -->
+            <div class="dui-libao-3">
+                <div class="open-libao-shine"></div>
+                <h3 class="open-libao-title"></h3>
+                <i class="close-dui-libao-2">×</i>
+                <div class="dui-libao-3-cont"></div>
+                <a href="https://www.b62dd.com/" target="_blank">立即存款</a>
+            </div>
+            <!-- 次数用完 -->
+            <div class="dui-libao-4">
+                <div class="open-libao-shine"></div>
+                <h3 class="open-libao-title"></h3>
+                <i class="close-dui-libao-2">×</i>
+                <div class="sure-dui-libao-cont">
+                    <div class="dui-libao-4-cont-inner"></div>
+                </div>
+                <div class="get-free-dui-libao-4">免费加赠</div>
+            </div>
+            <!-- 数字月饼 -->
+            <div class="shuzi-yb-his">
+                <h3>礼品兑换记录</h3>
+                <i class="close-libao-his">×</i>
+                <div class="shuzi-yb-his-table-box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>礼品名称</th>
+                                <th>中奖时间</th>
+                                <th>数量</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>保时捷 * 卡宴</td>
+                                <td>兑换  数字月饼：1、5、8、12、15</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>保时捷 * 卡宴</td>
+                                <td>兑换  数字月饼：1、5、8、12、15</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>保时捷 * 卡宴</td>
+                                <td>兑换  数字月饼：1、5、8、12、15</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>保时捷 * 卡宴</td>
+                                <td>兑换  数字月饼：1、5、8、12、15</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>保时捷 * 卡宴</td>
+                                <td>兑换  数字月饼：1、5、8、12、15</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>保时捷 * 卡宴</td>
+                                <td>兑换  数字月饼：1、5、8、12、15</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>保时捷 * 卡宴</td>
+                                <td>兑换  数字月饼：1、5、8、12、15</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>保时捷 * 卡宴</td>
+                                <td>兑换  数字月饼：1、5、8、12、15</td>
+                                <td>2</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+               
+            </div>
+            <div class="shuzi-yb-look">
+                <h3>1.当前收集的月饼</h3>
+                <i class="close-libao-his">×</i>
+                <div class="shuzi-yb-look-cont">
+                    <span>1<i>3</i></span>
+                    <span>2<i>3</i></span>
+                    <span>3<i>3</i></span>
+                    <span>4<i>3</i></span>
+                    <span>5<i>3</i></span>
+                    <span>6<i>3</i></span>
+                    <span>7<i>3</i></span>
+                    <span>8<i>3</i></span>
+                    <span>9<i>3</i></span>
+                    <span>10<i>3</i></span>
+                    <span>11<i>3</i></span>
+                    <span>12<i>3</i></span>
+                    <span>13<i>3</i></span>
+                    <span>14<i>3</i></span>
+                    <span>15<i>3</i></span>
+                    <span>16<i>3</i></span>
+                    <span>17<i>3</i></span>
+                    <span>18<i>3</i></span>
+                    <span>19<i>3</i></span>
+                    <span>20<i>3</i></span>
+                    <span>21<i>3</i></span>
+                    <span>22<i>3</i></span>
+                    <span>23<i>3</i></span>
+                    <span>24<i>3</i></span>
+                </div>
+                <button class="share-shuzi-yb">分享获得更多月饼</button>
+            </div>
+            <div class="dui-shuzi-1">
+                <h3>数字月饼兑换</h3>
+                <i class="close-libao-his">×</i>
+                <div class="dui-shuzi-1-cont clear-fix">
+                    <div class="dui-shuzi-1-cont-left">
+                        <img src="./img/cars/p1.png" alt="">
+                    </div>
+                    <div class="dui-shuzi-1-cont-right">
+                        <span>1<i>3</i></span>
+                        <span>2<i>3</i></span>
+                        <span>3<i>3</i></span>
+                        <span>4<i>3</i></span>
+                        <span>5<i>3</i></span>
+                        <span>6<i>3</i></span>
+                        <span>7<i>3</i></span>
+                        <span>8<i>3</i></span>
+                    </div>
+                </div>
+                <p>本次兑换将消耗以上数字月饼</p>
+                <div class="dui-shuzi-1-btn-wrap">
+                    <button class="dui-shuzi-1-btn-can">确认</button>
+                    <button class="dui-shuzi-1-btn-cancel">取消</button>
+                </div>
+            </div>
+            
+            <div class="addr-form">
+                <i class="close-addr-form">×</i>
+                <label for="">收货地址：<input type="text" id="addr-addr" placeholder="请输入您的收货地址"></label>
+                
+                <label for="">收货邮编：<input type="text" id="addr-code" placeholder="请输入您的收货邮编"></label>
+                
+                <label for="">收货姓名：<input type="text" id="addr-name" placeholder="请输入您的收货姓名"></label>
+               
+                <label for="">个人电话：<input type="text" id="addr-phone" placeholder="请输入您的个人电话"></label>
+
+                <label for="">联系微信：<input type="text" id="addr-wechat" placeholder="请输入您的联系微信"></label>
+
+                <button type="button" class="sure-commit-addr">提交</button>
+            </div>
+
+            <div class="dui-shuzi-2">
+                <h3>数字月饼兑换</h3>
+                <i class="close-libao-his">×</i>
+                <!-- <div class="dui-shuzi-2-cont">
+                    <span>1<i>3</i></span>
+                    <span>2<i>3</i></span>
+                    <span>3<i>3</i></span>
+                    <span>4<i>3</i></span>
+                    <span>5<i>3</i></span>
+                </div> -->
+
+                <p>您现在拥有的月饼数不足以兑换此奖品</p>
+
+                <div class="dui-shuzi-2-btn-wrap">
+                    <button class="dui-shuzi-2-btn-can">确认</button>
+                    <button class="dui-shuzi-2-btn-cancel">取消</button>
+                </div>
+                
+            </div>
+            <!-- 投注积分 -->
+            <div class="jifen-rules">
+                <i class="close-libao-his">×</i>
+                <h3>投注积分获得规则</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>游戏类型</th>
+                            <th>流水累计赠送积分比例</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>体育游戏</td>
+                            <td>1000流水=16积分</td>
+                        </tr>
+                        <tr>
+                            <td>真人视讯</td>
+                            <td>1000流水=10积分</td>
+                        </tr>
+                        <tr>
+                            <td>电子游戏</td>
+                            <td>1000流水=12积分</td>
+                        </tr>
+                        <tr>
+                            <td>彩票游戏</td>
+                            <td>1000流水=12积分</td>
+                        </tr>
+                       
+                        <tr>
+                            <td>棋牌游戏</td>
+                            <td>1000流水=10积分</td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+                <p style="color:#fff; padding:0 10px;font-size: 16px;padding-top: 20px;">当天累计积分，系统将于次日中午12:30后陆续更新（北京时间）。温馨提示：由于参与活动的玩家较多，部分玩家累计积分详情更新稍有延迟，请耐心等待系统更新完毕即可！</p>
+            </div>
+            <div class="my-jifen">
+                <i class="close-libao-his">×</i>
+                <h3>我的积分</h3>
+                <p><span class="my-jifen-total">500</span>分</p>
+                <button class="sure-my-jifen">确认</button>
+                <h5 style="color:#fff;font-size:20px;font-weight:normal;margin-top: 20px;padding:0 10px;">当天累计积分，次日中午12:00后，系统将按顺序自动更新（北京时间）。温馨提示：由于活动参与人数过多，累计积分详情更新稍有延迟，请耐心等待即可！</h5>
+            </div>
+            <!-- 敲金蛋 -->
+            <!-- <div class="can-qiao">
+                <div class="open-libao-shine"></div>
+                <h3 class="open-libao-title"></h3>
+                <i class="close-libao-his close-qiao-dan">×</i>
+                <div class="can-qiao-cont"><span>500</span>元</div>
+                <button class="ling-can-qiao">点击领取</button>
+            </div>
+            <div class="canNot-qiao">
+                <div class="open-libao-shine"></div>
+                <h3 class="open-libao-title"></h3>
+                <i class="close-libao-his close-qiao-dan">×</i>
+                <div class="canNot-qiao-cont">
+                    <i class="canNot-em-tear"></i>
+                </div>
+                <div class="canNot-qiao-comeOn">继续加油</div>
+            </div> -->
+            <div class="qiao-step-1">
+                <i class="close-qiao-step-1">×</i>
+                <h3>钻石彩蛋</h3>
+                <p>1颗需要<span class="close-qiao-step-1-span"></span>积分，请问要砸几颗？</p>
+                <div class="qiao-step-1-cont"><span class="qiao-step-1-add">+</span><input class="qiao-step-1-value" type="number" value="0"><span class="qiao-step-1-jian">-</span></div>
+                <button class="qiao-1-btn-yes">确认</button>
+            </div>
+
+            <div class="qiao-step-2">
+                <i class="close-qiao-step-1">×</i>
+                <h3>钻石彩蛋</h3>
+                <p>是否确定兑换</p>
+                <div class="qiao-2-btn-wrap">
+                    <button class="qiao-2-btn-yes">是</button>
+                    <button class="qiao-2-btn-no">否</button>
+                </div>
+            </div>
+
+            <div class="qiao-step-3">
+                <i class="close-qiao-step-1">×</i>
+                <h3>钻石彩蛋</h3>
+                <p>兑换积分不足</p>
+                <div class="qiao-3-btn-wrap">
+                    <button class="qiao-3-btn-yes">确认</button>
+                    <button class="qiao-3-btn-no">积分规则？</button>
+                </div>
+            </div>
+            <div class="qiao-step-4">
+                <div class="qiao-4-before">
+                    <div class="qiao-4-dan active"></div>
+                    <div class="qiao-4-chui active"></div>
+                </div>
+                <div class="qiao-4-after-1">
+                     <div class="qiao-4-after-1-sun"></div>
+                     <img src="./img/caidan-1-lie.png" alt="">
+                </div>
+                <div class="qiao-4-after-2">
+                    <i class="close-qiao-step-4">×</i>
+                    <h3 class="qiao-4-after-2-title"></h3>
+                    <div class="qiao-4-after-2-sun"></div>
+                    <div class="qiao-4-after-2-cont">
+                        <h4>获得彩金</h4>
+                        <div class="qiao-4-after-2-inner">
+                            <span>50.00<i>元</i></span>
+                            <span>30.00<i>元</i></span>
+                            <span>20.00<i>元</i></span>
+                            <span>10.00<i>元</i></span>
+                            <span>70.00<i>元</i></span>
+                            <span>60.00<i>元</i></span>
+                            <span>60.00<i>元</i></span>
+                            <span>60.00<i>元</i></span>
+                            <span>60.00<i>元</i></span>
+                            <span>60.00<i>元</i></span>
+                            <span>16.00<i>元</i></span>
+                            <span>60.00<i>元</i></span>
+                            <span>16.00<i>元</i></span>
+                            <span>60.00<i>元</i></span>
+                            <span>16.00<i>元</i></span>
+                            <span>60.00<i>元</i></span>
+                            <span>16.00<i>元</i></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 猜大小 -->
+            <div class="guess-table">
+                <i class="close-guess-table">×</i>
+                <div class="guess-inner clear-fix">
+                        <div class="guess-left">
+                            <button class="guess-big">大</button>
+                        </div>
+
+                        <div class="guess-mid" id="guess-mid">
+                            
+                            <div class="guess-mid-before">
+                                <div class="before-show-shaizi-item"></div>
+                            </div>
+
+                            <div class="guess-mid-after">
+                                <div class="guess-after-cont">
+                                    <div class="after-show-shaizi-item"></div>
+                                    <div class="after-hide-shaizi-item"></div>
+                                    <p class="lottely-number">开奖数字：<span>5</span></p>
+                                    <p class="lottely-result">开奖结果：<span>小</span></p>
+                                </div>
+
+                                <div class="guess-after-btn-wrap">
+                                    <button class="one-more-time">再玩一次</button>
+                                    <button class="share-friends">分享朋友</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="guess-right">
+                            <button class="guess-small">小</button>
+                        </div>
+                </div>
+                <strong class="float-score">+1</strong>
+            </div>
+            <div class="guess-jifen">
+                <h3>输入下注积分</h3>
+                <i class="close-guess-jifen">×</i>
+                <div class="guess-jifen-cont">
+                   <label for="guess-score">下注积分</label>  <input id="guess-score" placeholder="请输入下注积分" type="number">
+                </div>
+                <div class="guess-jifen-btn-wrap">
+                    <button class="guess-jifen-sure">确定</button>
+                    <button class="guess-jifen-cancel">取消</button>
+                </div>
+            </div>
+
+            <div class="guess-question">
+                <i class="close-guess-quesstion">×</i>
+                <p>下注<span class="bet-cur-score">564</span>积分</p>
+                <p>进行游戏吗？</p>
+                <div class="guess-question-btn-wrap">
+                    <button class="guess-question-btn-sure">确认</button>
+                    <button class="guess-question-btn-cancel">取消</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="score-toast">
+            <div class="score-toast-inner">
+                <span>提示：</span>
+                <p>恭喜您，领取成功</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../common/js/Api.js"></script>
+    <script src="../common/js/Func.js"></script>
+    <script src="../common/js/index.js"></script>
+    <script src="../common/js/superSlide.js"></script>
+    <script src="../common/js/jquery.qrcode.min.js"></script>
+    <script src="../common/js/clipboard.min.js"></script>
+    <script>
+        $(function(){
+           
+        })
+        
+
+    </script>
+</body>
+</html>

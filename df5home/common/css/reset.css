@@ -1,0 +1,34 @@
+body,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dl,
+dd,
+form,
+input,
+textarea,
+select {
+  padding: 0;
+  margin: 0;
+}
+body{
+    /* font-family: "MicroSoft Yahei" */
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+}
+
+ul,li,ol{
+    list-style: none;
+}
+button{
+    border: none;
+    outline: none;
+}
+table{
+    border-collapse:collapse;
+}

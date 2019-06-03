@@ -1,0 +1,22 @@
+body,ul,li,p,h1,h2,h3,h4,h5,h6,dl,dd,form,input,textarea,select,a {padding: 0;margin: 0;}
+body *{/* font-family: "MicroSoft Yahei" */color:#444;font-size:14px;font-family: "lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;}
+ul,li,ol{list-style: none;}
+a{text-decoration:none}
+button{border: none;outline: none;}
+table{border-collapse:collapse;}
+.fl{float:left;}
+.fr{float:right;}
+.clear{clear:both;}
+.header{background:#4f7dcc;height:45px;line-height:45px;padding:0 10px;margin-bottom:10px}
+.header *{color:#FFF}
+.header img{display:inline-block;height:43px;padding:1px 0;}
+.header .title{font-size:24px;font-weight:bold;margin-left:1em}
+.body{position: absolute;top:46px;bottom:0;right:0;left:0;}
+.body .body_left{width:10%;}
+.body .body_main{width:90%;height:100%}
+
+.body .body_left ul li a{padding:10px 0;width:100%;display:inline-block;font-weight:bolder;text-align:center;}
+.body .body_left ul li a:hover{background:#4f7dcc;color:#FFF;}
+
+.active{background:#5f8ddc;}
+.active a{color:#FFF}
